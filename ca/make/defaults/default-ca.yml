@@ -1,0 +1,16 @@
+
+{{section_name}}:
+  title: Nou nom de pàgina
+  subtitle: Nou subtítol de pàgina
+  description: Nova descripció de pàgina
+  default-section:
+    title: Títol de secció per defecte
+    image: ""
+    leading-1: |
+      Primer text de la secció principal número u.
+    leading-2: |
+      La segona secció comença aquí. Aquest és un text per defecte.\
+      \
+      Estem preparats per proporcionar més text de plantilla per omplir aquesta secció.\
+      \
+      Finalment, una mica més de text per defecte per omplir l'espai i mostrar com es mostren aquests paràgrafs a la pàgina.
