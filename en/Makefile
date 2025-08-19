@@ -1,14 +1,32 @@
-# Makefile
-# The main Makefile that includes and organizes other task-related Makefiles.
+# Makefile para web-persualia-plus (sin .ONESHELL, compatible con make de macOS)
+SHELL := /bin/bash
 
-include make/editor.mk
-include make/dev.mk
-include make/new_page.mk
+.PHONY: help test test_ca test_en test-prod deploy clean
 
-help:
-    # Display available make commands.
-	@echo '----'
-	@echo 'make install                      	- install libraries and dependencies'
-	@echo 'make build                        	- build _site'
-	@echo 'make start                        	- build _site and start local server on http://localhost:4000'
-	@echo 'make new_page name=example       	- create a new page with the name "example"'
+help: ## Muestra este ayuda
+	@echo "Comandos:"
+	@echo "  make test       -> Limpia y levanta dev en ES"
+	@echo "  make test_ca    -> Limpia y levanta dev en CA"
+	@echo "  make test_en    -> Limpia y levanta dev en EN"
+	@echo "  make test-prod  -> Limpia, build prod y sirve estático"
+	@echo "  make deploy     -> Merge de tu rama en main, build y push"
+
+clean: ## Limpia artefactos de Jekyll/CSS
+	@npm run clean
+
+test: ## Dev (ES)
+	@npm run clean && npm run dev
+
+test_ca: ## Dev (CA)
+	@npm run clean && npm run dev:ca
+
+test_en: ## Dev (EN)
+	@npm run clean && npm run dev:en
+
+# Nota: "make test prod" del enunciado se implementa como "make test-prod"
+test-prod: ## Build producción y servidor estático
+	@npm run clean && npm run build && npm run serve:static
+
+# Deploy: mergea la rama actual en main, build y push
+deploy:
+	@bash scripts/deploy.sh
