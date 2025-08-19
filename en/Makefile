@@ -9,7 +9,7 @@ help: ## Muestra este ayuda
 	@echo "  make test_ca    -> Limpia y levanta dev en CA"
 	@echo "  make test_en    -> Limpia y levanta dev en EN"
 	@echo "  make test-prod  -> Limpia, build prod y sirve estático"
-	@echo "  make deploy     -> Merge de tu rama en main, build y push"
+	@echo "  make deploy     -> Merge de tu rama en main, build y push (MSG='tu commit')"
 
 clean: ## Limpia artefactos de Jekyll/CSS
 	@npm run clean
@@ -28,5 +28,6 @@ test-prod: ## Build producción y servidor estático
 	@npm run clean && npm run build && npm run serve:static
 
 # Deploy: mergea la rama actual en main, build y push
+# Usa: make deploy MSG="chore: deploy"
 deploy:
-	@bash scripts/deploy.sh
+	@bash scripts/deploy.sh "$(MSG)"
