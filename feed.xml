@@ -1,4 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://persualia-plus.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://persualia-plus.github.io/" rel="alternate" type="text/html" hreflang="es" /><updated>2025-10-07T18:35:38+00:00</updated><id>https://persualia-plus.github.io/feed.xml</id><title type="html">Persualia</title><subtitle>Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir.</subtitle><entry xml:lang="es"><title type="html">META VS. EUROPA: cuando la política se convierte en silencio</title><link href="https://persualia-plus.github.io/noticias/marketing/ong/2025/10/07/meta-vs-europa-cuando-la-politica-se-convierte-en-silencio/" rel="alternate" type="text/html" title="META VS. EUROPA: cuando la política se convierte en silencio" /><published>2025-10-07T10:00:00+00:00</published><updated>2025-10-07T10:00:00+00:00</updated><id>https://persualia-plus.github.io/noticias/marketing/ong/2025/10/07/meta-vs-europa-cuando-la-politica-se-convierte-en-silencio</id><content type="html" xml:base="https://persualia-plus.github.io/noticias/marketing/ong/2025/10/07/meta-vs-europa-cuando-la-politica-se-convierte-en-silencio/"><![CDATA[<p>Esta semana, Meta ha empezado a bloquear anuncios que considera “debate político”. Una medida que llega después de tiempo de tensión con la Unión Europea en torno a la transparencia publicitaria.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://persualia-plus.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://persualia-plus.github.io/" rel="alternate" type="text/html" hreflang="es" /><updated>2025-11-14T16:36:36+00:00</updated><id>https://persualia-plus.github.io/feed.xml</id><title type="html">Persualia</title><subtitle>Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir.</subtitle><entry xml:lang="es"><title type="html">De revisar webs cada mañana a tener un tablero listo</title><link href="https://persualia-plus.github.io/noticias/automatizacion/desarrollo/2025/11/14/automatizar-busqueda-noticias-tablero-trello/" rel="alternate" type="text/html" title="De revisar webs cada mañana a tener un tablero listo" /><published>2025-11-14T08:00:00+00:00</published><updated>2025-11-14T08:00:00+00:00</updated><id>https://persualia-plus.github.io/noticias/automatizacion/desarrollo/2025/11/14/automatizar-busqueda-noticias-tablero-trello</id><content type="html" xml:base="https://persualia-plus.github.io/noticias/automatizacion/desarrollo/2025/11/14/automatizar-busqueda-noticias-tablero-trello/"><![CDATA[<h1 id="así-automatizamos-la-búsqueda-de-noticias">Así automatizamos la búsqueda de noticias</h1>
+
+<p>¿Te suena esta escena?</p>
+
+<p>Cada mañana, alguien del equipo abre un montón de pestañas: webs institucionales, blogs, medios locales… Revisa titulares, copia enlaces, comprueba si ya se compartieron, decide qué merece convertirse en tarea. Un trabajo necesario, pero repetitivo, propenso a errores y muy difícil de escalar.</p>
+
+<p>En nuestro caso, la pregunta fue:<br />
+<strong>“¿Podemos liberar a las personas de esta vigilancia manual y dejar que se concentren en analizar y decidir, no en recolectar?”</strong></p>
+
+<hr />
+
+<h2 id="el-punto-de-partida-una-rutina-que-quema-tiempo">El punto de partida: una rutina que quema tiempo</h2>
+
+<p>Teníamos exactamente este escenario:</p>
+
+<ul>
+  <li>Múltiples webs y fuentes, algunas con RSS y otras sin él.</li>
+  <li>Revisión manual cada día.</li>
+  <li>Riesgo de olvidar fuentes, repetir noticias o llegar tarde a ciertos temas.</li>
+</ul>
+
+<p>El resultado: muchas horas invertidas en “buscar” y pocas en <strong>interpretar y actuar</strong>.</p>
+
+<h2 id="el-objetivo-un-asistente-que-prepara-el-tablero-de-trabajo">El objetivo: un “asistente” que prepara el tablero de trabajo</h2>
+
+<p>Definimos un objetivo muy simple de explicar:</p>
+
+<blockquote>
+  <p>Que cada mañana, sin que nadie tenga que hacer nada, aparezca un listado de titulares recientes ya preparados en un tablero (por ejemplo, Trello), listos para priorizar y asignar.</p>
+</blockquote>
+
+<p>En la práctica, eso significa:</p>
+
+<ul>
+  <li>Agregar titulares desde múltiples fuentes.</li>
+  <li>Evitar duplicados (que la misma noticia no aparezca dos o tres veces).</li>
+  <li>Guardar solo lo imprescindible: título, enlace, fecha y origen.</li>
+  <li>Dejar todo en un formato cómodo para trabajar (tarjetas/tareas).</li>
+</ul>
+
+<p>Nada de descargar páginas completas ni complicarse con el contenido íntegro: <strong>solo metadatos útiles</strong>.</p>
+
+<h2 id="cómo-funciona-el-flujo-automatizado">Cómo funciona el flujo automatizado</h2>
+
+<p>Imagina un “asistente digital” muy disciplinado que, cada día:</p>
+
+<ol>
+  <li>Visita las distintas fuentes definidas (webs, blogs, RSS…).</li>
+  <li>Revisa qué hay de nuevo desde la última vez.</li>
+  <li>Comprueba si una noticia ya fue recogida antes para no repetirla.</li>
+  <li>Crea una tarjeta en un tablero (Trello, en nuestro caso) con la información básica.</li>
+  <li>Deja además un registro histórico en una hoja de cálculo para poder auditar y analizar tendencias.</li>
+  <li>Si algo falla (por ejemplo, una web cambia su diseño), avisa al equipo por Slack para que no pase desapercibido.</li>
+</ol>
+
+<p>El resultado es que el equipo ya no “sale de caza” por Internet: <strong>abre su tablero y empieza directamente a decidir qué hacer con cada noticia.</strong></p>
+
+<h2 id="qué-cambió-en-el-día-a-día">Qué cambió en el día a día</h2>
+
+<p>Aunque las cifras exactas pueden variar según la organización, el impacto se ve muy rápido. En nuestro caso:</p>
+
+<ul>
+  <li>Pasamos de dedicar <strong>entre 60 y 90 minutos diarios</strong> a revisar fuentes…</li>
+  <li>…a dedicar <strong>10–15 minutos</strong> a revisar un tablero ya preparado.</li>
+  <li>Se redujeron los errores humanos (olvidar fuentes, repetir noticias, saltarse algo relevante).</li>
+  <li>Mejoró la capacidad de priorizar: todo entra con el mismo formato y con la misma calidad de información.</li>
+  <li>Ganamos una base de datos histórica que permite ver tendencias: picos de publicación, frecuencia por fuente, etc.</li>
+</ul>
+
+<p>En definitiva: <strong>menos esfuerzo operativo, más capacidad de análisis y decisión.</strong></p>
+
+<h2 id="retos-que-tuvimos-que-resolver">Retos que tuvimos que resolver:</h2>
+
+<p>Por el camino aparecieron varios desafíos, que pueden ayudarte si quieres montar algo similar:</p>
+
+<ul>
+  <li><strong>Fuentes muy distintas entre sí</strong>: algunas webs son estáticas, otras cambian mucho, algunas tienen RSS, otras no.</li>
+  <li><strong>Cambios silenciosos en las páginas</strong>: si una web cambia su diseño, el sistema puede dejar de “entenderla”. Por eso añadimos alertas claras cuando algo deja de funcionar.</li>
+  <li><strong>Fechas y formatos diferentes</strong>: no todas las fuentes muestran la fecha igual; fue clave normalizar esa información.</li>
+  <li><strong>Evitar duplicados</strong>: a veces una noticia cambia ligeramente la URL; el sistema tiene que detectar que es la misma.</li>
+  <li><strong>Respetar las webs que visitamos</strong>: no se trata de lanzar miles de peticiones por minuto, sino de trabajar de forma responsable.</li>
+</ul>
+
+<h2 id="claves-de-diseño-para-que-sea-fácil-de-mantener">Claves de diseño para que sea fácil de mantener</h2>
+
+<p>Más allá de la parte técnica, hubo varias decisiones de diseño que marcaron la diferencia:</p>
+
+<ul>
+  <li><strong>Mismo modelo de datos para todas las fuentes</strong>: todas las noticias se guardan con los mismos campos. Eso facilita mucho el análisis y las integraciones futuras.</li>
+  <li><strong>Añadir nuevas fuentes sin rehacer el sistema</strong>: cada nueva fuente sigue un “contrato” claro, lo que evita romper todo al crecer.</li>
+  <li><strong>Alertas accionables</strong>: cuando algo falla, el mensaje indica qué fuente, qué ha pasado y por dónde empezar a mirar.</li>
+</ul>
+
+<h2 id="una-pincelada-técnica-para-quien-quiera-detalles">Una pincelada técnica (para quien quiera detalles)</h2>
+
+<p>Si te interesa la parte técnica, lo resumimos así:</p>
+
+<ul>
+  <li>Lo hemos construido con <strong>Python</strong>, con pequeños “módulos” que saben leer cada tipo de fuente.</li>
+  <li>El proceso automático sigue siempre los mismos pasos: extraer, validar, normalizar, evitar duplicados y crear tareas.</li>
+  <li>Usamos integraciones ligeras con <strong>Trello</strong> (tarjetas), <strong>Google Sheets</strong> (registro histórico) y <strong>Slack</strong> (alertas).</li>
+  <li>Está programado para ejecutarse de forma automática cada día, en un entorno repetible.</li>
+</ul>
+
+<p>Pero para el usuario final, lo importante es que <strong>funcione de forma fiable y predecible</strong>, no el detalle de cómo.</p>
+
+<h2 id="qué-podríamos-añadir-a-futuro">¿Qué podríamos añadir a futuro?</h2>
+
+<p>Ahora que la base está montada, se abren posibilidades interesantes:</p>
+
+<ul>
+  <li>Usar IA para ofrecer un resumen de lo publicado de forma diaria.</li>
+  <li>Usar IA para que según criterios definidos pueda aplicar filtros automáticos para destacar noticias clave o eliminar noticias no relevantes.</li>
+</ul>
+
+<h2 id="conclusión">Conclusión</h2>
+
+<p>El verdadero valor de este proyecto no está en el código, sino en el <strong>cambio de foco</strong>:</p>
+
+<blockquote>
+  <p>Las personas expertas dejan de invertir horas en “vigilar” fuentes y pueden dedicar su tiempo a lo que aporta más valor: interpretar, decidir y ejecutar.</p>
+</blockquote>
+
+<p>Un proceso automático convierte la dispersión de webs y canales en un flujo estructurado de tareas accionables.<br />
+Es la diferencia entre <strong>llegar tarde a las noticias</strong> y <strong>tener cada mañana un tablero listo para actuar</strong>.</p>
+
+<h2 id="quieres-saber-más">¿Quieres saber más?</h2>
+
+<p>Si en tu organización también estáis dedicando demasiadas horas a vigilar webs y boletines, podemos hablar.</p>
+
+<div class="text-center not-prose"><a class="btn btn-primary text-primary-content btn-lg" href="mailto:mail@persualia.com">Contáctanos</a></div>
+
+<p>y te comparto un esquema visual de la arquitectura y los pasos que seguimos para automatizar este flujo, adaptado a tu contexto.</p>
+
+<p><code class="language-plaintext highlighter-rouge">#Automatización</code> <code class="language-plaintext highlighter-rouge">#GestiónDeInformación</code> <code class="language-plaintext highlighter-rouge">#Productividad</code> <code class="language-plaintext highlighter-rouge">#TransformaciónDigital</code> <code class="language-plaintext highlighter-rouge">#Noticias</code> <code class="language-plaintext highlighter-rouge">#Comunicación</code> <code class="language-plaintext highlighter-rouge">#DataDriven</code></p>]]></content><author><name>Albert Pérez</name></author><category term="noticias" /><category term="automatizacion" /><category term="desarrollo" /><category term="Automatizacion" /><category term="Productividad" /><category term="Trello" /><category term="FlujoDeTrabajo" /><category term="GestionDeInformacion" /><summary type="html"><![CDATA[Cómo automatizamos la recolección de titulares para que cada mañana el equipo encuentre un tablero listo para priorizar, sin revisar decenas de webs a mano.]]></summary></entry><entry xml:lang="es"><title type="html">META VS. EUROPA: cuando la política se convierte en silencio</title><link href="https://persualia-plus.github.io/noticias/marketing/ong/2025/10/07/meta-vs-europa-cuando-la-politica-se-convierte-en-silencio/" rel="alternate" type="text/html" title="META VS. EUROPA: cuando la política se convierte en silencio" /><published>2025-10-07T10:00:00+00:00</published><updated>2025-10-07T10:00:00+00:00</updated><id>https://persualia-plus.github.io/noticias/marketing/ong/2025/10/07/meta-vs-europa-cuando-la-politica-se-convierte-en-silencio</id><content type="html" xml:base="https://persualia-plus.github.io/noticias/marketing/ong/2025/10/07/meta-vs-europa-cuando-la-politica-se-convierte-en-silencio/"><![CDATA[<p>Esta semana, Meta ha empezado a bloquear anuncios que considera “debate político”. Una medida que llega después de tiempo de tensión con la Unión Europea en torno a la transparencia publicitaria.</p>
 
 <p>Para evitar problemas legales, Meta ha optado por aplicar el cortafuegos más fácil: <strong>prohibir la difusión de cualquier anuncio que pueda interpretarse como apertura de un debate político</strong>. ¿El resultado? Campañas humanitarias, de salud pública, educación o sensibilización social también están cayendo en el mismo saco. Campañas que buscan denunciar el genocidio de Gaza, recaudar fondos para emergencias globales o remover la salud pública ahora pueden ser bloqueadas por “políticas”.</p>
 

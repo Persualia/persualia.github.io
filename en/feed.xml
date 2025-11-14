@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://persualia-plus.github.io/en/feed.xml" rel="self" type="application/atom+xml" /><link href="https://persualia-plus.github.io/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-10-07T18:35:40+00:00</updated><id>https://persualia-plus.github.io/en/feed.xml</id><title type="html">Persualia</title><subtitle>Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir.</subtitle><entry xml:lang="en"><title type="html">META VS. EUROPE: when politics turns into silence</title><link href="https://persualia-plus.github.io/en/news/marketing/ngo/2025/10/07/meta-vs-europe-when-policy-turns-to-silence/" rel="alternate" type="text/html" title="META VS. EUROPE: when politics turns into silence" /><published>2025-10-07T10:00:00+00:00</published><updated>2025-10-07T10:00:00+00:00</updated><id>https://persualia-plus.github.io/en/news/marketing/ngo/2025/10/07/meta-vs-europe-when-policy-turns-to-silence</id><content type="html" xml:base="https://persualia-plus.github.io/en/news/marketing/ngo/2025/10/07/meta-vs-europe-when-policy-turns-to-silence/"><![CDATA[<p>This week Meta started blocking ads it labels as “political debate”. The move arrives after months of tension with the European Union over advertising transparency.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://persualia-plus.github.io/en/feed.xml" rel="self" type="application/atom+xml" /><link href="https://persualia-plus.github.io/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-11-14T16:36:38+00:00</updated><id>https://persualia-plus.github.io/en/feed.xml</id><title type="html">Persualia</title><subtitle>Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir.</subtitle><entry xml:lang="en"><title type="html">From opening dozens of tabs to a ready-to-go board</title><link href="https://persualia-plus.github.io/en/news/automation/development/2025/11/14/automate-news-scouting-trello-board/" rel="alternate" type="text/html" title="From opening dozens of tabs to a ready-to-go board" /><published>2025-11-14T08:00:00+00:00</published><updated>2025-11-14T08:00:00+00:00</updated><id>https://persualia-plus.github.io/en/news/automation/development/2025/11/14/automate-news-scouting-trello-board</id><content type="html" xml:base="https://persualia-plus.github.io/en/news/automation/development/2025/11/14/automate-news-scouting-trello-board/"><![CDATA[<h1 id="how-we-automated-news-scouting">How we automated news scouting</h1>
+
+<p>Does this scene ring a bell?</p>
+
+<p>Every morning someone on the team opens a pile of tabs: institutional sites, blogs, local media… They skim headlines, copy links, check whether they were already shared, decide what deserves to become a task. It is necessary work, yet repetitive, error-prone and nearly impossible to scale.</p>
+
+<p>For us the question became:<br />
+<strong>“Can we free people from this manual watch and let them focus on analysing and deciding, not on collecting?”</strong></p>
+
+<hr />
+
+<h2 id="the-starting-point-a-routine-that-burns-time">The starting point: a routine that burns time</h2>
+
+<p>Our situation looked exactly like this:</p>
+
+<ul>
+  <li>Multiple sites and sources, some with RSS and some without it.</li>
+  <li>Manual review every single day.</li>
+  <li>Risk of forgetting sources, duplicating stories or reacting too late.</li>
+</ul>
+
+<p>The outcome: many hours invested in “searching” and very few in <strong>interpreting and acting</strong>.</p>
+
+<hr />
+
+<h2 id="the-goal-an-assistant-that-prepares-the-working-board">The goal: an “assistant” that prepares the working board</h2>
+
+<p>We framed a very simple objective:</p>
+
+<blockquote>
+  <p>Every morning, without anyone lifting a finger, we want a list of fresh headlines already waiting in a Trello board, ready to prioritise and assign.</p>
+</blockquote>
+
+<p>Practically speaking, that means:</p>
+
+<ul>
+  <li>Aggregating headlines from multiple sources.</li>
+  <li>Avoiding duplicates (so the same story does not pop up two or three times).</li>
+  <li>Keeping only the essentials: title, link, date and origin.</li>
+  <li>Leaving everything in a work-friendly format (cards/tasks).</li>
+</ul>
+
+<p>No need to download full pages or deal with entire bodies of text: <strong>just useful metadata</strong>.</p>
+
+<hr />
+
+<h2 id="how-the-automated-flow-works">How the automated flow works</h2>
+
+<p>Picture a very disciplined “digital assistant” that, every day:</p>
+
+<ol>
+  <li>Visits the predefined sources (sites, blogs, RSS…).</li>
+  <li>Checks what is new compared with the previous run.</li>
+  <li>Verifies whether a story was already captured to avoid duplicates.</li>
+  <li>Creates a card in a board (Trello in our case) with the basic info.</li>
+  <li>Stores a historical log in a spreadsheet so we can audit and analyse trends.</li>
+  <li>If something breaks (for example, a site changes its layout), it notifies the team on Slack so it doesn’t go unnoticed.</li>
+</ol>
+
+<p>The result: the team no longer “hunts” across the internet — <strong>they open the board and immediately decide what to do with each headline.</strong></p>
+
+<hr />
+
+<h2 id="what-changed-in-our-day-to-day">What changed in our day to day</h2>
+
+<p>Numbers will vary by organisation, yet the impact showed up fast for us:</p>
+
+<ul>
+  <li>We went from spending <strong>60–90 minutes a day</strong> reviewing sources…</li>
+  <li>…to investing <strong>10–15 minutes</strong> reviewing a board that is already prepared.</li>
+  <li>Human errors dropped (forgetting sources, repeating stories, missing something relevant).</li>
+  <li>Prioritisation improved: everything arrives with the same format and quality.</li>
+  <li>We gained a historical dataset to spot trends: publishing spikes, frequency by source, and more.</li>
+</ul>
+
+<p>In short: <strong>less operational effort, more analytical capacity.</strong></p>
+
+<hr />
+
+<h2 id="challenges-we-had-to-solve">Challenges we had to solve</h2>
+
+<p>Along the way we faced several hurdles that may help if you plan something similar:</p>
+
+<ul>
+  <li><strong>Very different sources</strong>: some sites are static, others change often, some have RSS, others don’t.</li>
+  <li><strong>Silent layout changes</strong>: if a site redesigns itself, the system might stop “understanding” it, so we added clear alerts when that happens.</li>
+  <li><strong>Dates and formats all over the place</strong>: normalising that metadata was essential.</li>
+  <li><strong>Duplicate prevention</strong>: sometimes a story tweaks its URL; the system still has to recognise it.</li>
+  <li><strong>Being respectful with the sites we visit</strong>: this is not about hammering them with thousands of requests per minute, but about acting responsibly.</li>
+</ul>
+
+<hr />
+
+<h2 id="design-choices-that-keep-it-maintainable">Design choices that keep it maintainable</h2>
+
+<p>Beyond the technical bits, some design decisions made the difference:</p>
+
+<ul>
+  <li><strong>A single data model for every source</strong>: all stories are stored with the same fields, which simplifies analysis and future integrations.</li>
+  <li><strong>Adding new sources without rewrites</strong>: each source follows a clear “contract”, so scaling up does not break everything.</li>
+  <li><strong>Actionable alerts</strong>: whenever something fails, the message points to the source, the issue and where to start looking.</li>
+</ul>
+
+<hr />
+
+<h2 id="a-quick-technical-snapshot">A quick technical snapshot</h2>
+
+<p>For the tech-curious, here is the short version:</p>
+
+<ul>
+  <li>We built it with <strong>Python</strong>, using small modules that know how to read each source type.</li>
+  <li>The automated run always follows the same steps: extract, validate, normalise, deduplicate and create tasks.</li>
+  <li>We use lightweight integrations with <strong>Trello</strong> (cards), <strong>Google Sheets</strong> (historical log) and <strong>Slack</strong> (alerts).</li>
+  <li>It runs automatically every day in a reproducible environment.</li>
+</ul>
+
+<p>For the end user, the only thing that matters is that it <strong>behaves reliably and predictably</strong>, not the implementation details.</p>
+
+<hr />
+
+<h2 id="what-could-come-next">What could come next?</h2>
+
+<p>Now that the foundation is ready, a few ideas emerge:</p>
+
+<ul>
+  <li>Use AI to provide a short daily summary of the captured stories.</li>
+  <li>Use AI-driven filters to highlight key headlines or discard irrelevant ones based on predefined criteria.</li>
+</ul>
+
+<hr />
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The real value of this project is not the code — it is the <strong>shift in focus</strong>:</p>
+
+<blockquote>
+  <p>Experts stop spending hours “watching” sources and can devote their time to what brings the most value: interpreting, deciding and executing.</p>
+</blockquote>
+
+<p>An automated flow turns scattered sites and channels into a structured stream of actionable tasks.<br />
+It is the difference between <strong>reacting late to the news</strong> and <strong>finding a ready-to-go board every morning</strong>.</p>
+
+<hr />
+
+<h2 id="want-to-learn-more">Want to learn more?</h2>
+
+<p>If your organisation is also spending too many hours monitoring sites and newsletters, let’s talk.</p>
+
+<div class="text-center not-prose"><a class="btn btn-primary text-primary-content btn-lg" href="mailto:mail@persualia.com">Contact us</a></div>
+
+<p>I will share a visual outline of the architecture and the steps we follow to automate this flow, tailored to your context.</p>
+
+<p><code class="language-plaintext highlighter-rouge">#Automation</code> <code class="language-plaintext highlighter-rouge">#InformationManagement</code> <code class="language-plaintext highlighter-rouge">#Productivity</code> <code class="language-plaintext highlighter-rouge">#DigitalTransformation</code> <code class="language-plaintext highlighter-rouge">#News</code> <code class="language-plaintext highlighter-rouge">#Communication</code> <code class="language-plaintext highlighter-rouge">#DataDriven</code></p>]]></content><author><name>Albert Pérez</name></author><category term="news" /><category term="automation" /><category term="development" /><category term="automation" /><category term="productivity" /><category term="trello" /><category term="workflow" /><category term="information-management" /><summary type="html"><![CDATA[How we automated headline collection so every morning the team finds a Trello board ready to prioritize without spending an hour visiting websites.]]></summary></entry><entry xml:lang="en"><title type="html">META VS. EUROPE: when politics turns into silence</title><link href="https://persualia-plus.github.io/en/news/marketing/ngo/2025/10/07/meta-vs-europe-when-policy-turns-to-silence/" rel="alternate" type="text/html" title="META VS. EUROPE: when politics turns into silence" /><published>2025-10-07T10:00:00+00:00</published><updated>2025-10-07T10:00:00+00:00</updated><id>https://persualia-plus.github.io/en/news/marketing/ngo/2025/10/07/meta-vs-europe-when-policy-turns-to-silence</id><content type="html" xml:base="https://persualia-plus.github.io/en/news/marketing/ngo/2025/10/07/meta-vs-europe-when-policy-turns-to-silence/"><![CDATA[<p>This week Meta started blocking ads it labels as “political debate”. The move arrives after months of tension with the European Union over advertising transparency.</p>
 
 <p>To dodge legal headaches, Meta chose the easiest firewall: <strong>ban every single ad that could be interpreted as opening a political debate</strong>. The result? Humanitarian, public health, education or social awareness campaigns are being thrown into the same basket. Campaigns exposing the genocide in Gaza, raising funds for global emergencies or pushing public health messages can now be blocked for being “political”.</p>
 

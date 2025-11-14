@@ -34,25 +34,24 @@
 
   <body>
     <header class="navbar bg-base-300 shadow-sm sticky top-0 z-50 px-4 md:px-8" data-i18n-header>
-  <div class="navbar-start">
-    <!-- <div class="dropdown">
+  <div class="navbar-start gap-2">
+    <!-- Mobile Dropdown Menu - Moved to the left, before logo -->
+    <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Abrir menú móvil">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a href="/en/" data-i18n-key="navigation.home" data-i18n-scope="header">Inicio</a></li>
-        <li><a href="/en/about/" data-i18n-key="navigation.about" data-i18n-scope="header">Acerca de</a></li>
-        <li><a href="/en/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header">Blog</a></li>
-        <li><a href="/en/contact/" data-i18n-key="navigation.contact" data-i18n-scope="header">Contacto</a></li>
-        <li><a href="/en/persualia-demo/" data-i18n-key="navigation.persualia_demo" data-i18n-scope="header">Demo persualia</a></li>
-        <li><a href="/en/persualia-guide/" data-i18n-key="navigation.persualia_guide" data-i18n-scope="header">Guía persualia</a></li>
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+        <li><a href="/en/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li><a href="/en/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
-    </div> -->
+    </div>
+    
+    <!-- Logo with text - text only visible from md breakpoint -->
     <a href="/en/" class="btn btn-ghost text-primary text-xl p-0 hover:bg-transparent hover:scale-100 active:scale-100 border-0 focus:outline-none">
       <img src="/assets/images/svg/persualia-logo.svg" alt="Persualia Logo" class="h-10 w-10 rounded">
-      <span data-i18n-key="brand.title" data-i18n-scope="header">
+      <span class="hidden md:inline" data-i18n-key="brand.title" data-i18n-scope="header">
         Persualia
       </span>
     </a>
@@ -69,9 +68,23 @@
     </ul>
   </div-->
   
-  <div class="navbar-end">
+  <div class="navbar-end gap-2">
     
     
+    
+    <!-- Blog Button - Hidden when dropdown is visible (below lg) -->
+    <a href='/en/blog/' class="btn btn-outline btn-primary mr-2 hidden lg:flex" data-i18n-key="navigation.blog" data-i18n-scope="header">
+      Blog
+    </a>
+    
+    <!-- Contact Button with Email Icon - Text hidden below md -->
+    <a href="mailto:mail@persualia.com" class="btn btn-primary">
+      <span class="material-symbols-outlined text-2xl">mail</span>
+      <span class="hidden md:inline" data-i18n-key="navigation.contact_button" data-i18n-scope="header">
+        Contact
+      </span>
+    </a>
+
     <!-- Language Selector -->
     <div class="mr-2">
       <!-- Language Selector - Daisy UI 5 -->
@@ -83,8 +96,8 @@
         <img id="current-flag" src="/assets/images/languages/es.svg" alt="Current language" />
       </div>
     </div>
-    <span class="hidden sm:inline text-sm font-medium" id="current-lang">Español</span>
-    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+    <span class="hidden md:inline text-sm font-medium" id="current-lang">Español</span>
+    <svg class="hidden md:block w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
       <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
     </svg>
   </div>
@@ -124,13 +137,6 @@
 
     </div>
     
-    <a href='/en/blog/' class="btn btn-outline btn-primary mr-2" data-i18n-key="navigation.blog" data-i18n-scope="header">
-      Blog
-    </a>
-    
-    <a href="mailto:mail@persualia.com" class="btn btn-primary">
-      Contact
-    </a>
   </div>
 </header>
 
@@ -422,42 +428,29 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-xs sm:max-w-6xl md:max-w-2xl lg:max-w-6xl">
         
         
-        
-        
-        
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
   
   <figure class="w-full">
-    <img src="/assets/images/home/product-chatbot2.webp" 
-         alt="360º lead generation with chatbot" 
+    <img src="/assets/images/home/AdsIcon2.webp" 
+         alt="Paid Social & Ads" 
          class="w-full h-52 object-cover rounded-t-xl" />
   </figure>
   
   
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">360º lead generation with chatbot</h3>
+    <h3 class="card-title title-card mb-3">Paid Social & Ads</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Every step qualifies. Every lead counts.</strong></p>
+      <p><strong>Reach further with digital campaigns that work.</strong></p>
 
-<p>From ad to chatbot and emails, everything is designed to identify quality leads. Ideal for complex sales processes, where not just any contact will do.</p>
+<p>We manage advertising on Facebook, Instagram, TikTok, LinkedIn, and Google, tailored to your goals: branding, product sales, qualified lead generation, or limited-time promotions. We also take care of technical setups such as product catalogs on Google or Meta so you can sell smoothly and automatically.</p>
 
     </div>
-    <!--
     
-    <div class="card-actions justify-end mt-auto">
-      <button class="btn btn-primary btn-sm">
-        I want to know more
-      </button>
-    </div>
     
-    -->
   </div>
 </div>
 
-        
-        
-        
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
@@ -477,21 +470,11 @@
 <p>We analyze your previous sales campaigns and launch a battery of campaigns. In 3 months we test the result, in 12 we consolidate what works.</p>
 
     </div>
-    <!--
     
-    <div class="card-actions justify-end mt-auto">
-      <button class="btn btn-primary btn-sm">
-        I want to know more
-      </button>
-    </div>
     
-    -->
   </div>
 </div>
 
-        
-        
-        
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
@@ -511,21 +494,11 @@
 <p>Did you know that only between 2% and 10% of your followers see what you publish? Your organic posts will become automatic paid campaigns, without you having to lift a finger.</p>
 
     </div>
-    <!--
     
-    <div class="card-actions justify-end mt-auto">
-      <button class="btn btn-primary btn-sm">
-        I want to know more
-      </button>
-    </div>
     
-    -->
   </div>
 </div>
 
-        
-        
-        
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
@@ -545,21 +518,11 @@
 <p>Do you find reading data in GA4 confusing? We create visual and personalized reports so you understand what’s happening on your website without wasting time or needing an analyst.</p>
 
     </div>
-    <!--
     
-    <div class="card-actions justify-end mt-auto">
-      <button class="btn btn-primary btn-sm">
-        I want to know more
-      </button>
-    </div>
     
-    -->
   </div>
 </div>
 
-        
-        
-        
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
@@ -579,15 +542,8 @@
 <p>If you have a digital marketing challenge, let’s talk. If you’re not sure what you need, that’s fine too. We adapt each solution to each case.</p>
 
     </div>
-    <!--
     
-    <div class="card-actions justify-end mt-auto">
-      <button class="btn btn-primary btn-sm">
-        I want to know more
-      </button>
-    </div>
     
-    -->
   </div>
 </div>
 
