@@ -565,7 +565,7 @@
     
     <!-- Carousel Component -->
     <!-- Carrusel de logos de clientes (sin saltos) -->
-<div class="overflow-hidden carrusel-logos" data-duration="30" aria-label="Logos de clientes, desplazamiento continuo" role="region">
+<div class="overflow-hidden carrusel-logos" data-duration="60" aria-label="Logos de clientes, desplazamiento continuo" role="region">
   <div class="flex animate-scroll space-x-8 w-max" style="will-change: transform;">
     
     <div class="flex-shrink-0">
@@ -777,9 +777,12 @@
     /*
       Estilos locales y no intrusivos (scoping por .carrusel-logos)
       - Mantiene tus clases Tailwind
-      - Sin saltos: animación a -50% con contenido clonado
+      - Sin saltos: animación hasta el ancho de un set clonado
     */
-    .carrusel-logos { --logos-duration: 30s; }
+    .carrusel-logos {
+      --logos-duration: 30s;
+      --logos-translate: -50%;
+    }
 
     /* Permite suavizar la entrada/salida en bordes si se desea (comentado): */
     /* .carrusel-logos { mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent); -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent); } */
@@ -793,10 +796,10 @@
       .carrusel-logos .animate-scroll { animation: none; }
     }
 
-    /* Clave: animamos solo hasta -50% porque el track es [A][A] */
+    /* Clave: animamos solo lo que mide un set (definido en --logos-translate) */
     @keyframes carrusel-scroll {
       from { transform: translateX(0); }
-      to   { transform: translateX(-10%); }
+      to   { transform: translateX(var(--logos-translate)); }
     }
   </style>
 
@@ -808,13 +811,14 @@
         const scroller = root; // contenedor con overflow-hidden
         const track = root.querySelector('.animate-scroll');
         if (!track) return;
+        const originals = Array.from(track.children);
+        if (!originals.length) return;
 
         // Duración desde data-atributo (si existe)
         const custom = root.getAttribute('data-duration');
         if (custom) track.style.setProperty('--logos-duration', custom + 's');
 
         // 1) Clonar hijos originales para obtener [A][A]
-        const originals = Array.from(track.children);
         originals.forEach(n => track.appendChild(n.cloneNode(true)));
 
         // 2) Asegurar ancho suficiente (evita huecos en pantallas muy anchas)
@@ -826,12 +830,39 @@
         }
         ensureWidth();
 
+        function measureCycleWidth() {
+          return originals.reduce((total, node) => {
+            const rect = node.getBoundingClientRect();
+            const styles = window.getComputedStyle(node);
+            const marginLeft = parseFloat(styles.marginLeft) || 0;
+            const marginRight = parseFloat(styles.marginRight) || 0;
+            return total + rect.width + marginLeft + marginRight;
+          }, 0);
+        }
+
+        function updateTranslateDistance() {
+          const cycleWidth = measureCycleWidth();
+          if (cycleWidth > 0) {
+            track.style.setProperty('--logos-translate', `-${cycleWidth}px`);
+          }
+        }
+        updateTranslateDistance();
+
         // 3) Recalcular en resize
         if ('ResizeObserver' in window) {
-          const ro = new ResizeObserver(ensureWidth);
+          const ro = new ResizeObserver(() => {
+            ensureWidth();
+            updateTranslateDistance();
+          });
           ro.observe(scroller);
+          ro.observe(track);
         } else {
-          window.addEventListener('resize', ensureWidth);
+          const refreshFallback = () => {
+            ensureWidth();
+            updateTranslateDistance();
+          };
+          window.addEventListener('resize', refreshFallback);
+          window.addEventListener('load', refreshFallback);
         }
       } catch (e) {
         console.error('Carrusel logos init error:', e);
@@ -839,6 +870,7 @@
     })();
   </script>
 </div>
+
   </div>
 </section>
 
