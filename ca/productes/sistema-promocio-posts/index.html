@@ -124,10 +124,16 @@
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
     <!--link rel="stylesheet" href="/assets/css/typography.css"-->
     <link rel="stylesheet" href="/assets/css/fa.css">
     <link rel="stylesheet" href="/assets/css/material-icons.css">
     
+    <!-- GPU detection — adds .no-gpu to <html> before first paint -->
+    <script>
+      (function(){try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');if(!g){document.documentElement.classList.add('no-gpu');return}var d=g.getExtension('WEBGL_debug_renderer_info'),r=d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):'';if(/swiftshader|llvmpipe|mesa|microsoft basic/i.test(r))document.documentElement.classList.add('no-gpu')}catch(e){document.documentElement.classList.add('no-gpu')}})();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/svg/persualia-logo.svg">
 
@@ -147,8 +153,48 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+      
+      
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
         <li><a href="/ca/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li>
+          <details>
+            <summary data-i18n-key="navigation.products" data-i18n-scope="header">
+              <span class="font-medium">Productos</span>
+            </summary>
+            <ul>
+              
+                
+              
+                
+                  <li>
+                    <a href="/ca/productes/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">ROI Test</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/ca/productes/sistema-promocio-posts/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Sistemes de promoció de posts orgànics</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/ca/productes/analitica-web-clara/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Analítica web</span>
+                    </a>
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </details>
+        </li>
         <li><a href="/ca/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
     </div>
@@ -160,6 +206,54 @@
         Persualia
       </span>
     </a>
+
+    <div class="hidden md:block">
+      
+
+
+<div class="dropdown">
+  <div tabindex="0" role="button" class="btn btn-ghost gap-2" aria-label="Selector de productes">
+    <span class="text-sm font-medium" data-i18n-key="navigation.products" data-i18n-scope="header">
+      Productes
+    </span>
+    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
+    
+      
+    
+      
+        <li>
+          <a href="/ca/productes/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">ROI Test</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/ca/productes/sistema-promocio-posts/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Sistemes de promoció de posts orgànics</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/ca/productes/analitica-web-clara/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Analítica web</span>
+          </a>
+        </li>
+      
+    
+      
+    
+  </ul>
+</div>
+
+    </div>
   </div>
   
   <!--div class="navbar-center hidden lg:flex">
@@ -263,7 +357,7 @@
 <p>No és un problema de contingut.
 <strong>És l’algoritme.</strong></p>
 
-<p>Avui, només entre un <strong>2% i un 10%</strong> dels teus seguidors veuen el que publiques de manera orgànica. La resta simplement no se n’assabenta.</p>
+<p>Avui, només entre un <strong>2% i un 10% dels teus seguidors veuen el que publiques de manera orgànica.</strong> La resta simplement no se n’assabenta.</p>
 
         <div class="cta-row justify-start">
           <a class="btn btn-primary btn-lg" href="mailto:mail@persualia.com">Parla amb un especialista</a>
@@ -326,8 +420,8 @@
 <section class="section bg-base-200">
   <div class="container">
     <header class="section__header">
-      <h2 class="section-title">Tot el bo de la publicitat</h2>
-      <p class="section-subtitle mx-auto">Sense les complicacions habituals</p>
+      <h2 class="section-title">Tot el millor de la publicitat</h2>
+      <p class="section-subtitle mx-auto">Sense les complicacions de sempre</p>
     </header>
     <div class="grid-cards">
       
@@ -422,7 +516,7 @@
             
               <li>
               <i class="fa-solid fa-circle-check text-secondary"></i>
-              <span class="text-secondary font-semibold">Més interacció i engagement</span>
+              <span class="text-secondary font-semibold">Més interacció</span>
               <span>Likes, comentaris, compartits i guardats que indiquen interès real.</span></li>
             
               <li>
@@ -477,7 +571,7 @@
             
           </ul>
           <div class="font-bold text-secondary">Especialment útil per a retail, e-commerce, tercer sector i projectes B2B.</div>
-          <div class="font-bold text-secondary">És un sistema pensat per a marques que volen construir visibilitat de manera sostinguda i econòmica, no només fer campanyes puntuals. Si ja inverteixes temps a crear contingut, aquest sistema en multiplica l’impacte. Cada publicació deixa de ser un esforç aïllat i passa a formar part d’una estratègia contínua.</div>
+          <div class="">És un sistema pensat per a marques que volen construir visibilitat de manera sostinguda i econòmica, no només fer campanyes puntuals. Si ja inverteixes temps a crear contingut, aquest sistema en multiplica l’impacte. Cada publicació deixa de ser un esforç aïllat i passa a formar part d’una estratègia contínua.</div>
         </div>
       </div>
     </div>
@@ -488,7 +582,7 @@
   <div class="container">
     <header class="section__header">
       <h2 class="section-title">Plataformes disponibles</h2>
-      <p class="mx-auto text-center opacity-80">L'estratègia s'adapta a cada plataforma i al teu públic.</p>
+      <p class="section-subtitle mx-auto text-center opacity-80">L'estratègia s'adapta a cada plataforma i al teu públic.</p>
     </header>
     <div class="flow">
       <div class="flex flex-wrap items-center justify-center gap-8">
@@ -527,7 +621,7 @@
       <h2 class="section-title">Com funciona?</h2>
       <p class="section-subtitle mx-auto text-center">Simple, automàtic i controlat</p>
     </header>
-    <ul class="steps steps-vertical">
+    <ul class="steps steps-vertical mb-10">
       
         <li class="step step-primary" data-content="1">
           <div class="ml-4 text-left">
@@ -556,7 +650,7 @@
         <li class="step step-primary" data-content="4">
           <div class="ml-4 text-left">
             <h3 class="card-title">Activació automàtica</h3>
-            <p class="opacity-80">El sistema detecta el post i el converteix en campanya.</p>
+            <p class="opacity-80">El sistema detecta el post i el converteix en campanya.<br /><br /></p>
             
           </div>
         </li>
@@ -564,7 +658,7 @@
         <li class="step step-primary" data-content="5">
           <div class="ml-4 text-left">
             <h3 class="card-title">Seguiment i control</h3>
-            <p class="opacity-80">Accedeixes a un <strong>tauler clar i intuïtiu on veuràs el veritable altaveu d'aquest sistema:</strong> a quanta més gent està arribant el teu contingut, quines publicacions han generat més engagement, com evoluciona la teva visibilitat i la teva comunitat, quin tipus de posts funcionen millor</p>
+            <p class="opacity-80">Accedeixes a un <strong>tauler clar i intuïtiu on veuràs el veritable altaveu d'aquest sistema:</strong> a quanta més gent està arribant el teu contingut, quines publicacions han generat més interacció, com evoluciona la teva visibilitat i la teva comunitat, quin tipus de posts funcionen millor</p>
             
           </div>
         </li>
@@ -621,7 +715,7 @@
           <input type="checkbox" />
           <div class="collapse-title font-bold">En quines xarxes socials funciona?</div>
           <div class="collapse-content opacity-80 text-sm">
-            Actualment està disponible per a Facebook, Instagram i LinkedIn.
+            Actualment està disponible per a Facebook, Instagram, LinkedIn i TikTok.
           </div>
         </div>
       
@@ -664,11 +758,11 @@
 <section class="section bg-primary text-primary-content">
   <div class="container text-center">
     <h2>Fes que el teu contingut deixi de ser invisible</h2>
-    <p><strong>Si ja estàs creant contingut, fes que treballi per a tu.</strong></p>
+    <p>Si ja estàs creant contingut, fes que treballi per a tu.</p>
 
 <p>📩 Explica’ns el teu cas i t’expliquem com activar el Sistema de Promoció de Posts per a la teva marca.</p>
 
-<p><strong>Més visibilitat. Més impacte. Sense esforç extra.</strong></p>
+<p>Més visibilitat. Més impacte. Sense esforç extra.</p>
 
     <a class="btn btn-neutral btn-lg" href="mailto:mail@persualia.com">Parla amb un especialista</a>
   </div>
@@ -939,5 +1033,11 @@
     
     <!-- Language Selector JavaScript -->
     <script src="/assets/js/language-selector.js"></script>
+
+    <!-- GSAP + ScrollTrigger + Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/ca/assets/js/scroll-reveals.js" defer></script>
+    <script src="/ca/assets/js/product-sequence.js" defer></script>
   </body>
 </html>

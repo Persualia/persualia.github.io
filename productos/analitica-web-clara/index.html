@@ -124,10 +124,16 @@
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
     <!--link rel="stylesheet" href="/assets/css/typography.css"-->
     <link rel="stylesheet" href="/assets/css/fa.css">
     <link rel="stylesheet" href="/assets/css/material-icons.css">
     
+    <!-- GPU detection — adds .no-gpu to <html> before first paint -->
+    <script>
+      (function(){try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');if(!g){document.documentElement.classList.add('no-gpu');return}var d=g.getExtension('WEBGL_debug_renderer_info'),r=d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):'';if(/swiftshader|llvmpipe|mesa|microsoft basic/i.test(r))document.documentElement.classList.add('no-gpu')}catch(e){document.documentElement.classList.add('no-gpu')}})();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/svg/persualia-logo.svg">
 
@@ -147,8 +153,48 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+      
+      
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
         <li><a href="/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li>
+          <details>
+            <summary data-i18n-key="navigation.products" data-i18n-scope="header">
+              <span class="font-medium">Productos</span>
+            </summary>
+            <ul>
+              
+                
+              
+                
+                  <li>
+                    <a href="/productos/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">ROI Test</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/productos/sistema-promocion-posts/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Sistemas de promoción de posts</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/productos/analitica-web-clara/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Analítica Web</span>
+                    </a>
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </details>
+        </li>
         <li><a href="/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
     </div>
@@ -160,6 +206,54 @@
         Persualia
       </span>
     </a>
+
+    <div class="hidden md:block">
+      
+
+
+<div class="dropdown">
+  <div tabindex="0" role="button" class="btn btn-ghost gap-2" aria-label="Selector de productos">
+    <span class="text-sm font-medium" data-i18n-key="navigation.products" data-i18n-scope="header">
+      Productos
+    </span>
+    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
+    
+      
+    
+      
+        <li>
+          <a href="/productos/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">ROI Test</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/productos/sistema-promocion-posts/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Sistemas de promoción de posts</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/productos/analitica-web-clara/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Analítica Web</span>
+          </a>
+        </li>
+      
+    
+      
+    
+  </ul>
+</div>
+
+    </div>
   </div>
   
   <!--div class="navbar-center hidden lg:flex">
@@ -254,14 +348,14 @@
 
 <section class="hero hero--compact">
   <div class="container">
-    <h1>Analítica web clara (de verdad)</h1>
+    <h1>Analítica web clara (de&nbsp;verdad)</h1>
     <div class="grid gap-10 lg:grid-cols-2 items-center">
       <div>
-        <h2 class="text-primary">Ni paja, ni caos. Solo los datos que importan.</h2>
+        <h2 class="text-primary">Ni paja, ni caos. Solo&nbsp;los datos que importan.</h2>
         <p><strong>¿Leer datos en GA4 te resulta confuso?</strong></p>
 
 <ul>
-  <li>Gráficos por todas partes.</li>
+  <li>Tablas por todas partes.</li>
   <li>Métricas que no sabes si son importantes.</li>
   <li>Horas delante de informes que no te ayudan a decidir.</li>
 </ul>
@@ -311,7 +405,7 @@
             <i class="fa-solid fa-circle-check text-2xl" aria-hidden="true"></i>
           </div>
           <h2 class="card-title mt-0">Analítica pensada para decidir, no para decorar</h2>
-          <p class="mb-3 lg:text-base">Creamos un sistema de analítica avanzada y reporting claro, adaptado a tu negocio, para que entiendas qué pasa en tu web y en tus campañas con un solo vistazo.</p>
+          <p class="mb-3 lg:text-base">Creamos un sistema de analítica avanzada y y de informes claro, adaptado a tu negocio, para que entiendas qué pasa en tu web y en tus campañas con un solo vistazo.</p>
           <ul class="mb-25 flow lg:text-base font-bold">
             
               <li>Sin tecnicismos</li>
@@ -342,7 +436,7 @@
                   <i class="fa-solid fa-list-check" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Datos claros y accionables</h3>
+            <h3 class="card-title mt-0">Datos claros y accionables</h3>
             <p>Solo lo que necesitas para decidir mejor.</p>
           </div>
         </div>
@@ -354,7 +448,7 @@
                   <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Visión global en tiempo real</h3>
+            <h3 class="card-title mt-0">Visión global en tiempo real</h3>
             <p>Web, campañas y conversiones en un mismo dashboard.</p>
           </div>
         </div>
@@ -366,7 +460,7 @@
                   <i class="fa-solid fa-clock" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Ahorro de tiempo</h3>
+            <h3 class="card-title mt-0">Ahorro de tiempo</h3>
             <p>Menos horas analizando, más tiempo optimizando.</p>
           </div>
         </div>
@@ -378,7 +472,7 @@
                   <i class="fa-solid fa-chess-knight" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Mejores decisiones estratégicas</h3>
+            <h3 class="card-title mt-0">Mejores decisiones estratégicas</h3>
             <p>Optimizas campañas basándote en datos reales, no en intuiciones.</p>
           </div>
         </div>
@@ -390,7 +484,7 @@
                   <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Informes listos sin esfuerzo</h3>
+            <h3 class="card-title mt-0">Informes listos sin esfuerzo</h3>
             <p>Reportes automáticos, claros y fáciles de entender.</p>
           </div>
         </div>
@@ -402,7 +496,7 @@
                   <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i>
               
             </div>
-            <h3 class="card-title mt-0">✔️ Autonomía total</h3>
+            <h3 class="card-title mt-0">Autonomía total</h3>
             <p>No dependes de un analista para interpretar cada dato.</p>
           </div>
         </div>
@@ -446,7 +540,7 @@
   </div>
 </section>
 
-<section class="section" id="como-funciona">
+<section class="section bg-base-200" id="como-funciona">
   <div class="container">
     <header class="section__header">
       <h2 class="section-title">¿Cómo funciona?</h2>
@@ -486,14 +580,14 @@
   </div>
 </section>
 
-<section class="section bg-base-200">
+<section class="section">
   <div class="container">
     <header class="section__header">
       <h2 class="section-title">FAQs – Preguntas frecuentes</h2>
     </header>
     <div class="flow">
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">¿Necesito conocimientos de analítica?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -501,7 +595,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">¿Trabajáis solo con GA4?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -509,7 +603,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">¿Los informes son automáticos?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -517,7 +611,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">¿Puedo adaptar los KPIs a mi negocio?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -525,7 +619,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">¿Tendré acceso al dashboard en todo momento?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -533,7 +627,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">¿Esto sustituye a un analista?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -552,9 +646,9 @@
 
 <p>📩 Cuéntanos tu caso y te explicamos cómo montar una analítica clara, útil y pensada para decidir.</p>
 
-<p><strong>Más claridad.</strong>
-<strong>Mejores decisiones.</strong>
-<strong>Menos ruido.</strong></p>
+<p>Más claridad.
+Mejores decisiones.
+Menos ruido.</p>
 
     <a class="btn btn-neutral btn-lg" href="mailto:mail@persualia.com">Habla con un especialista</a>
   </div>
@@ -825,5 +919,11 @@
     
     <!-- Language Selector JavaScript -->
     <script src="/assets/js/language-selector.js"></script>
+
+    <!-- GSAP + ScrollTrigger + Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/assets/js/scroll-reveals.js" defer></script>
+    <script src="/assets/js/product-sequence.js" defer></script>
   </body>
 </html>

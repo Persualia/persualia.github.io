@@ -7,9 +7,9 @@
     
     
     <!-- Título dinámico para home con i18n -->
-    <title>Persualia - Conversational Marketing | Persualia</title>
-    <meta property="og:title" content="Persualia - Conversational Marketing" />
-    <meta property="twitter:title" content="Persualia - Conversational Marketing" />
+    <title>Conversion Engineering | Persualia</title>
+    <meta property="og:title" content="Conversion Engineering" />
+    <meta property="twitter:title" content="Conversion Engineering" />
     <meta name="description" content="Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir." />
     <meta property="og:description" content="Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir." />
     <meta property="og:url" content="https://persualia.com/" />
@@ -57,10 +57,16 @@
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
     <!--link rel="stylesheet" href="/assets/css/typography.css"-->
     <link rel="stylesheet" href="/assets/css/fa.css">
     <link rel="stylesheet" href="/assets/css/material-icons.css">
     
+    <!-- GPU detection — adds .no-gpu to <html> before first paint -->
+    <script>
+      (function(){try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');if(!g){document.documentElement.classList.add('no-gpu');return}var d=g.getExtension('WEBGL_debug_renderer_info'),r=d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):'';if(/swiftshader|llvmpipe|mesa|microsoft basic/i.test(r))document.documentElement.classList.add('no-gpu')}catch(e){document.documentElement.classList.add('no-gpu')}})();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/svg/persualia-logo.svg">
 
@@ -80,8 +86,48 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+      
+      
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
         <li><a href="/en/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li>
+          <details>
+            <summary data-i18n-key="navigation.products" data-i18n-scope="header">
+              <span class="font-medium">Productos</span>
+            </summary>
+            <ul>
+              
+                
+              
+                
+                  <li>
+                    <a href="/en/products/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">ROI Test</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/en/products/posts-promotion-system/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Post Promotion System</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/en/products/clear-web-analytics/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Web Analytics</span>
+                    </a>
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </details>
+        </li>
         <li><a href="/en/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
     </div>
@@ -93,6 +139,54 @@
         Persualia
       </span>
     </a>
+
+    <div class="hidden md:block">
+      
+
+
+<div class="dropdown">
+  <div tabindex="0" role="button" class="btn btn-ghost gap-2" aria-label="Products selector">
+    <span class="text-sm font-medium" data-i18n-key="navigation.products" data-i18n-scope="header">
+      Products
+    </span>
+    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
+    
+      
+    
+      
+        <li>
+          <a href="/en/products/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">ROI Test</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/en/products/posts-promotion-system/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Post Promotion System</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/en/products/clear-web-analytics/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Web Analytics</span>
+          </a>
+        </li>
+      
+    
+      
+    
+  </ul>
+</div>
+
+    </div>
   </div>
   
   <!--div class="navbar-center hidden lg:flex">
@@ -185,61 +279,59 @@
 </script>
 
 <!-- Hero Section - DaisyUI 5 Pure with Gradient Background -->
-<div class="hero">   
-  <!-- Contenido Hero -->
-  <div class="text-center md:text-left ">
-    
-    <!-- Overline -->
-    <div class="badge badge-primary badge-lg">
-      Conversational Marketing
-    </div>
-    
-    <!-- Título Principal -->
-    <h1 class="">
-      Persualia
-
-    </h1>
-    
-    <!-- Subtítulo -->
-    <h2 class="text-primary">
-      How we understand marketing
-    </h2>
-    
-    <!-- Descripción -->
-    <div class="prose text-left [&>p]:my-5">
-      <h4 id="we-are-a-marketing-agency-with-two-obsessions-copy-that-connects-and-results-that-can-be-measured">We are a marketing agency with two obsessions: copy that connects and results that can be measured.</h4>
-
-<p>We look for words with intention, technology that solves and strategies focused on results.</p>
-
-<p>We believe that persuading goes beyond communicating. It’s connecting with who listens to you, telling a story that makes sense and knowing how to interpret your audience’s behavior. That’s why we combine creative storytelling with smart technology.</p>
-
-<p>We make your message reach, impact and convert. With head, heart and technical resources.</p>
-
-    </div>
-    
-    <!-- CTAs -->
-    <div class="cta-row md:justify-start gap-4 my-8">
-      <a href="mailto:mail@persualia.com" class="btn btn-primary btn-lg ">
-        Let's talk
-      </a>
-      <a href="#products" class="btn btn-outline btn-lg ">
-        Products
-      </a>
-    </div>
-    
-    <!-- Trust badges -->
-    <div class="cta-row flex-row flex-wrap  text-sm md:justify-start opacity-70">
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded">insights</span>
-        Measurable results
+<div class="hero animate-hero">
+  <div class="hero-content container">
+    <!-- Contenido Hero -->
+    <div class="text-center md:text-left ">
+      
+      <!-- Overline -->
+      <div class="badge badge-primary badge-lg">
+        Conversion Engineering
       </div>
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded">edit</span>
-        Copy that connects
+      
+      <!-- Título Principal -->
+      <h1 class="">
+        Sales are not improvised
+
+      </h1>
+      
+      <!-- Subtítulo -->
+      <h2 class="text-primary">
+        Digital infrastructure that turns investment into&nbsp;data and data into sales
+      </h2>
+      
+      <!-- Descripción 
+      <div class="prose text-left [&>p]:my-5">
+        <h4 id="we-build-the-digital-infrastructure-that-turns-investment-into-data-and-data-into-sales">We build the digital infrastructure that turns investment into data and data into sales.</h4>
+
+<p>Technology, data, and execution so every decision has measurable impact.</p>
+
+      </div>-->
+      
+      <!-- CTAs -->
+      <div class="cta-row md:justify-start gap-4 my-8">
+        <a href="mailto:mail@persualia.com" class="btn btn-primary btn-lg ">
+          Contact us
+        </a>
+        <a href="#products" class="btn btn-outline btn-lg ">
+          Products
+        </a>
       </div>
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded">psychology</span>
-        AI with human judgment
+      
+      <!-- Trust badges -->
+      <div class="cta-row justify-start flex flex-col flex-wrap text-base md:justify-start opacity-70">
+        <div class="flex  items-start gap-2">
+          <i class="fa-solid fa-award mt-1"></i>
+          +15 years refining conversion systems
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-building-user mt-1"></i>
+          +75 brands scaled with reliable data
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-diagram-project mt-1"></i>
+          +300 projects delivered with measurable impact
+        </div>
       </div>
     </div>
   </div>
@@ -250,195 +342,207 @@
 <section class="section">
   <div class="container">
     <!-- Section Header -->
-    <h2 class="section__header">
-      This is how we think, this is how we act
-    </h2>
+    <h1 class="section__header" data-reveal>
+      The Persualia Conversion System
+    </h1>
     
     
     
     <!-- Feature Rows -->
-    <div class="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
+    <div class="grid grid-cols-1 gap-8 sm:gap-10 md:gap-18">
       
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[auto_1fr] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[auto_1fr] row-even
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/StrategyIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/StrategyIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  pr-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Strategy that makes sense</strong></p>
+  <div class="card-body px-0  pr-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-accent  transition-colors duration-300">
+      <p><strong>Evidence-based strategy</strong></p>
 
-<p>Every project starts with questions. We listen, analyze and outline a plan that has feet, head and results.</p>
+<p>Deployment of marketing plans where every decision is grounded in data analysis and historical performance. No assumptions, only hypothesis validation.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[1fr_auto] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[1fr_auto] row-odd
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/AdsIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  bg-primary sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/AdsIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  lg:order-1 pl-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Advertising that knows who it’s talking to</strong></p>
+  <div class="card-body px-0  lg:order-1 pl-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-primary  transition-colors duration-300">
+      <p><strong>Advertising that knows who it is talking to</strong></p>
 
-<p>Whether on social media or Google, we don’t throw ads into the air. We segment, impact and optimize. We are specialists in finding the right audience and making every euro invested truly pay off.</p>
+<p>Segmentation, impact, and optimization across Google, Meta, and LinkedIn that do more than buy traffic: they start conversations, qualify, and prioritize profiles with the highest likelihood of conversion.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[auto_1fr] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[auto_1fr] row-even
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/ChatbotIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/ChatbotIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  pr-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>We create chatbots that don’t look like robots</strong></p>
+  <div class="card-body px-0  pr-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-accent  transition-colors duration-300">
+      <p><strong>Conversion-focused chatbots</strong></p>
 
-<p>Natural conversations, human tone and clear objectives. Our chatbots don’t just respond: they qualify, collect and convert.</p>
+<p>Flows in Typebot, Landbot, and WhatsApp Business API that capture attention, guide the narrative, and extract structured data. They qualify leads and monitor high-granularity events, detecting behaviors and friction points invisible to conventional advertising.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[1fr_auto] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[1fr_auto] row-odd
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/IAIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  bg-primary sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/IAIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  lg:order-1 pl-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Artificial intelligence with human judgment</strong></p>
+  <div class="card-body px-0  lg:order-1 pl-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-primary  transition-colors duration-300">
+      <p><strong>Applied AI, not decorative AI</strong></p>
 
-<p>We use AI to understand audience behavior, detect patterns, improve results and create personalized solutions.</p>
+<p>It’s not about relying only on Meta’s or Google’s native AI. We also apply it for predictive analysis, process optimization, and dynamic generation of creative assets that improve real performance and user experience.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[auto_1fr] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[auto_1fr] row-even
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/AutomationIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/AutomationIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  pr-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Automations that free up time</strong></p>
+  <div class="card-body px-0  pr-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-accent  transition-colors duration-300">
+      <p><strong>Automations that remove operational friction</strong></p>
 
-<p>We automate repetitive tasks so you and your team can focus on what really matters. Everything flows, but it’s under control.</p>
+<p>Automation of repetitive tasks so you and your team can focus on higher-value strategic work.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[1fr_auto] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[1fr_auto] row-odd
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/TeamIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  bg-primary sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/TeamIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  lg:order-1 pl-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>A team with a thousand perspectives</strong></p>
+  <div class="card-body px-0  lg:order-1 pl-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-primary  transition-colors duration-300">
+      <p><strong>Projects executed by specialists, not generalists</strong></p>
 
-<p>Copywriters, journalists, scriptwriters, programmers, technicians, creatives, analysts and strategists. This mix allows us to see your project from all angles and find the best way to move it forward.</p>
+<p>Copywriters for response marketing, digital architecture developers, data analysts, high-impact creatives, and funnel strategists. The Persualia Evidence System is run by specialists who master every conversion angle: from code to words.</p>
 
     </div>
   </div>
 </div>
+
       
     </div>
   </div>
@@ -448,152 +552,217 @@
 <section id="products" class="section bg-base-200">
   <div class="container">
     <!-- Section Header -->
-      <h2 class="section__header">
-        Persualia's star products
-      </h2>
-      <h3 class="text-primary">
-        What we do best (and what usually works best)
-      </h3>            
+      <h1 class="section__header">
+        Flagship products
+      </h1>
+      <!--
+      <h3 class="text-primary mb-10">
+        Intelligence applied to digital growth
+      </h3>-->            
       
+      <!--
       <div class="prose prose-lg !my-5">
-        <p>These are some of the solutions we apply most. Designed to <strong>capture better, automate more and decide with data.</strong></p>
+        <p>These are some of the solutions we apply most often. Designed to <strong>capture better, automate more, and decide with data.</strong></p>
 
-<p>They are born from real problems of our clients and are designed so that marketing not only sounds good, but works.</p>
+<p>They are born from real client problems and built so marketing doesn’t just sound good, but actually works.</p>
 
-      </div>
+      </div>-->
     
       <!-- Products Grid -->  
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-xs sm:max-w-6xl md:max-w-2xl lg:max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-auto max-w-xs sm:max-w-6xl md:max-w-2xl lg:max-w-6xl">
         
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/AdsIcon2.webp" 
-         alt="Paid Social & Ads" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="leadflow"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/AdsIcon2.webp"
+         alt="LeadFlow System"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Paid Social & Ads</h3>
+    <h3 class="card-title title-card mb-3">LeadFlow System</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Reach further with digital campaigns that work.</strong></p>
+      <p><strong>Advertising acquisition system designed to generate qualified leads.</strong></p>
 
-<p>We manage ads on Facebook, Instagram, TikTok, LinkedIn, and Google for branding, sales, or leads. We also set up catalogs on Google and Meta so you can sell without friction.</p>
+<p>Investing in advertising and receiving contacts with no real interest is frustrating. The sales team wastes time, gets worn down, and the data does not clearly show which channel is actually working.</p>
+
+<p>LeadFlow System builds lead generation funnels that filter, segment, and qualify users before they reach the sales team. This allows your team to speak with better-prepared prospects and helps your advertising generate leads with stronger intent.</p>
 
     </div>
     
-    
+    <div class="card-actions justify-end mt-auto">
+      
+      <a href="mailto:mail@persualia.com" class="btn btn-primary btn-sm">
+        Discuss my case
+      </a>
+      
+    </div>
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-roitest2.webp" 
-         alt="ROI Test" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="roi-test"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/roi-test.webp"
+         alt="ROI Test"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
-  
   
   <div class="card-body flex-grow">
     <h3 class="card-title title-card mb-3">ROI Test</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>We test, fine-tune and maximize your investment.</strong></p>
+      <p><strong>Technical second opinion for campaigns with room to improve.</strong></p>
 
-<p>We analyze your previous sales campaigns and launch a battery of campaigns. In 3 months we test the result, in 12 we consolidate what works.</p>
+<p>When results do not reach their expected potential, it is not always clear whether the issue is structure, segmentation, creatives, or measurement.</p>
+
+<p>ROI Test provides external validation with no initial commitment: for 90 days, we audit and execute a comparison plan to keep only profitable strategies in production.</p>
 
     </div>
     
-    
+    <div class="card-actions justify-end mt-auto">
+      
+      <a href="/en/products/roi-test/" class="btn btn-primary btn-sm">
+        Learn more
+      </a>
+      
+    </div>
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-promopost2.webp" 
-         alt="Post promotion system" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="promopost"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/product-promopost2.webp"
+         alt="Post Promotion System"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Post promotion system</h3>
+    <h3 class="card-title title-card mb-3">Post Promotion System</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>More visibility for your content, without extra effort.</strong></p>
+      <p><strong>More visibility, without extra operational load.</strong></p>
 
-<p>Did you know that only between 2% and 10% of your followers see what you publish? Your organic posts will become automatic paid campaigns, without you having to lift a finger.</p>
+<p>With organic reach between 2% and 10%, even your highest-value content can stay off your audience’s radar. Posting more does not solve the problem, and manual management consumes resources.</p>
+
+<p>This system turns strategic posts into segmented campaigns that guarantee constant visibility and engagement without daily operational effort.</p>
 
     </div>
     
-    
     <div class="card-actions justify-end mt-auto">
+      
       <a href="/en/products/posts-promotion-system/" class="btn btn-primary btn-sm">
-        I want to know more
+        Learn more
       </a>
+      
     </div>
-    
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-analytics2.webp" 
-         alt="Clear web analytics (really)" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="analytics"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/product-analytics2.webp"
+         alt="Web Analytics"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Clear web analytics (really)</h3>
+    <h3 class="card-title title-card mb-3">Web Analytics</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>No fluff, no chaos. Just the data that matters.</strong></p>
+      <p><strong>Clarity in decision-making without complex dashboards.</strong></p>
 
-<p>Do you find reading data in GA4 confusing? We create visual and personalized reports so you understand what’s happening on your website without wasting time or needing an analyst.</p>
+<p>GA4 complexity and lack of context lead to decisions based on intuition or low-actionability metrics. When data is not interpreted correctly, it loses strategic value.</p>
+
+<p>We configure customized visual reports that identify conversion leaks and show real performance to support clear, reliable decisions.</p>
 
     </div>
-    
     
     <div class="card-actions justify-end mt-auto">
+      
       <a href="/en/products/clear-web-analytics/" class="btn btn-primary btn-sm">
-        I want to know more
+        Learn more
       </a>
+      
     </div>
-    
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-custom2.webp" 
-         alt="Don't fit into any? Better." 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="custom"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/product-custom2.webp"
+         alt="Custom Conversion Architecture"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Don't fit into any? Better.</h3>
+    <h3 class="card-title title-card mb-3">Custom Conversion Architecture</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>We’re good at listening, adapting and finding what you really need.</strong></p>
+      <p><strong>The infrastructure that connects your ads to your real sales system.</strong></p>
 
-<p>If you have a digital marketing challenge, let’s talk. If you’re not sure what you need, that’s fine too. We adapt each solution to each case.</p>
+<p>Your organization has defined tools, processes, and goals. Standard solutions do not adapt to this reality and create friction, duplication, and data loss.</p>
+
+<p>We design, together with your team, an infrastructure aligned with how you work, integrating campaigns, CRM, and sales systems to remove inefficiencies and scale with control.</p>
 
     </div>
     
-    
+    <div class="card-actions justify-end mt-auto">
+      
+      <a href="mailto:mail@persualia.com" class="btn btn-primary btn-sm">
+        Discuss my case
+      </a>
+      
+    </div>
   </div>
 </div>
 
@@ -606,9 +775,13 @@
 <section class="py-16 lg:py-24">
   <div class="mx-auto px-4">
     <!-- Section Header -->    
-    <h2 class="text-center">
-      They have trusted Persualia
+    <h2 class="text-center" data-reveal>
+      Proven track record
     </h2>
+    <!--
+    <h3 class="text-center text-primary">
+      High-performance projects developed for:
+    </h3>--> 
     
     
     <!-- Carousel Component -->
@@ -620,203 +793,203 @@
       <img src="/assets/images/clients/accion-contra-el-hambre.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/acnur.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/aldeas-infantiles.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Amnistia-Internacional.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Andreu.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Blue-Planet.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Calbet.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Caritas.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Clinic.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Dalmau.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/finques-feliu.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/fundacio_carreras.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/fpm.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/gff.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/greenpeace.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/goes-group.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/gotta.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/iebs.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/irb.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Lindt.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/manubens.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/medicos-sin-fronteras.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/MNAC.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/monapart.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/omnium.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/oxfam.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/palau.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/SJD.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/vall-dhebron.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
   </div>
@@ -846,8 +1019,8 @@
 
     /* Clave: animamos solo lo que mide un set (definido en --logos-translate) */
     @keyframes carrusel-scroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(var(--logos-translate)); }
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(var(--logos-translate), 0, 0); }
     }
   </style>
 
@@ -903,7 +1076,6 @@
             updateTranslateDistance();
           });
           ro.observe(scroller);
-          ro.observe(track);
         } else {
           const refreshFallback = () => {
             ensureWidth();
@@ -923,11 +1095,11 @@
 </section>
 
 <!-- CTA Section - DaisyUI 5 Pure -->
-<section class="bg-primary text-primary-content py-8">
+<section class="bg-primary text-primary-content py-8" data-reveal>
   <div class="mx-auto text-center max-w-2xl px-4">
-    <h2>Do we talk?</h2>
+    <h2>Shall we talk?</h2>
     <p>
-      If you have a digital marketing challenge, we are here to help you solve it.
+      If you have a digital marketing challenge, we're here to help you solve it.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="mailto:mail@persualia.com" class="btn btn-neutral btn-lg">Contact</a>
@@ -1200,5 +1372,11 @@
     
     <!-- Language Selector JavaScript -->
     <script src="/assets/js/language-selector.js"></script>
+
+    <!-- GSAP + ScrollTrigger + Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/en/assets/js/scroll-reveals.js" defer></script>
+    <script src="/en/assets/js/product-sequence.js" defer></script>
   </body>
 </html>

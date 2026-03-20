@@ -124,10 +124,16 @@
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
     <!--link rel="stylesheet" href="/assets/css/typography.css"-->
     <link rel="stylesheet" href="/assets/css/fa.css">
     <link rel="stylesheet" href="/assets/css/material-icons.css">
     
+    <!-- GPU detection — adds .no-gpu to <html> before first paint -->
+    <script>
+      (function(){try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');if(!g){document.documentElement.classList.add('no-gpu');return}var d=g.getExtension('WEBGL_debug_renderer_info'),r=d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):'';if(/swiftshader|llvmpipe|mesa|microsoft basic/i.test(r))document.documentElement.classList.add('no-gpu')}catch(e){document.documentElement.classList.add('no-gpu')}})();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/svg/persualia-logo.svg">
 
@@ -147,8 +153,48 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+      
+      
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
         <li><a href="/en/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li>
+          <details>
+            <summary data-i18n-key="navigation.products" data-i18n-scope="header">
+              <span class="font-medium">Productos</span>
+            </summary>
+            <ul>
+              
+                
+              
+                
+                  <li>
+                    <a href="/en/products/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">ROI Test</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/en/products/posts-promotion-system/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Post Promotion System</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/en/products/clear-web-analytics/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Web Analytics</span>
+                    </a>
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </details>
+        </li>
         <li><a href="/en/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
     </div>
@@ -160,6 +206,54 @@
         Persualia
       </span>
     </a>
+
+    <div class="hidden md:block">
+      
+
+
+<div class="dropdown">
+  <div tabindex="0" role="button" class="btn btn-ghost gap-2" aria-label="Products selector">
+    <span class="text-sm font-medium" data-i18n-key="navigation.products" data-i18n-scope="header">
+      Products
+    </span>
+    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
+    
+      
+    
+      
+        <li>
+          <a href="/en/products/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">ROI Test</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/en/products/posts-promotion-system/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Post Promotion System</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/en/products/clear-web-analytics/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Web Analytics</span>
+          </a>
+        </li>
+      
+    
+      
+    
+  </ul>
+</div>
+
+    </div>
   </div>
   
   <!--div class="navbar-center hidden lg:flex">
@@ -254,16 +348,16 @@
 
 <section class="hero hero--compact">
   <div class="container">
-    <h1>Clear web analytics (for real)</h1>
+    <h1>Clear Web Analytics (for real)</h1>
     <div class="grid gap-10 lg:grid-cols-2 items-center">
       <div>
-        <h2 class="text-primary">No fluff, no chaos. Just the data that matters.</h2>
-        <p><strong>Does reading data in GA4 feel confusing?</strong></p>
+        <h2 class="text-primary">No fluff, no chaos. Just&nbsp;the data that matters.</h2>
+        <p><strong>Does working with GA4 data feel confusing?</strong></p>
 
 <ul>
-  <li>Charts all over the place.</li>
-  <li>Metrics you are not sure are important.</li>
-  <li>Hours spent on reports that don’t help you decide.</li>
+  <li>Tables all over the place.</li>
+  <li>Metrics you’re not sure actually matter.</li>
+  <li>Hours spent on reports that don’t help you make decisions.</li>
 </ul>
 
 <p>And in the end, the same feeling: <strong>lots of data, few answers.</strong></p>
@@ -297,7 +391,7 @@
             
               <li>Preparing reports takes too much time</li>
             
-              <li>The data exists, but not in a way that yields strategic conclusions</li>
+              <li>The data exists, but not in a way that leads to strategic insights</li>
             
               <li>Decision-making becomes slow and uncertain</li>
             
@@ -310,8 +404,8 @@
           <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-base-100/70 text-success">
             <i class="fa-solid fa-circle-check text-2xl" aria-hidden="true"></i>
           </div>
-          <h2 class="card-title mt-0">Analytics designed to decide, not decorate</h2>
-          <p class="mb-3 lg:text-base">We build an advanced analytics and reporting system tailored to your business so you can understand what is happening on your site and in your campaigns at a glance.</p>
+          <h2 class="card-title mt-0">Analytics designed to drive decisions, not decorate</h2>
+          <p class="mb-3 lg:text-base">We build an advanced analytics and reporting system tailored to your business so you can understand what is happening on your website and in your campaigns at a glance.</p>
           <ul class="mb-25 flow lg:text-base font-bold">
             
               <li>No jargon</li>
@@ -342,8 +436,8 @@
                   <i class="fa-solid fa-list-check" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Clear, actionable data</h3>
-            <p>Only what you need to make better decisions.</p>
+            <h3 class="card-title mt-0">Clear, actionable data</h3>
+            <p>Only what you need to make smarter decisions.</p>
           </div>
         </div>
       
@@ -354,7 +448,7 @@
                   <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Global overview in real time</h3>
+            <h3 class="card-title mt-0">Global overview in real time</h3>
             <p>Web, campaigns, and conversions in a single dashboard.</p>
           </div>
         </div>
@@ -366,7 +460,7 @@
                   <i class="fa-solid fa-clock" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Time savings</h3>
+            <h3 class="card-title mt-0">Time savings</h3>
             <p>Fewer hours analyzing, more time optimizing.</p>
           </div>
         </div>
@@ -378,7 +472,7 @@
                   <i class="fa-solid fa-chess-knight" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Better strategic decisions</h3>
+            <h3 class="card-title mt-0">Better strategic decisions</h3>
             <p>You optimize campaigns based on real data, not guesses.</p>
           </div>
         </div>
@@ -390,7 +484,7 @@
                   <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
                 
             </div>
-            <h3 class="card-title mt-0">✔️ Effortless ready-to-go reports</h3>
+            <h3 class="card-title mt-0">Effortless ready-to-go reports</h3>
             <p>Automatic reports that are clear and easy to understand.</p>
           </div>
         </div>
@@ -402,7 +496,7 @@
                   <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i>
               
             </div>
-            <h3 class="card-title mt-0">✔️ Full autonomy</h3>
+            <h3 class="card-title mt-0">Full autonomy</h3>
             <p>You don't need an analyst to interpret every metric.</p>
           </div>
         </div>
@@ -446,7 +540,7 @@
   </div>
 </section>
 
-<section class="section" id="como-funciona">
+<section class="section bg-base-200" id="como-funciona">
   <div class="container">
     <header class="section__header">
       <h2 class="section-title">How does it work?</h2>
@@ -486,14 +580,14 @@
   </div>
 </section>
 
-<section class="section bg-base-200">
+<section class="section">
   <div class="container">
     <header class="section__header">
       <h2 class="section-title">FAQs – Frequently asked questions</h2>
     </header>
     <div class="flow">
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">Do I need analytics knowledge?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -501,7 +595,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">Do you only work with GA4?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -509,7 +603,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">Are the reports automatic?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -517,7 +611,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">Can I adapt the KPIs to my business?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -525,7 +619,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">Will I have access to the dashboard at all times?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -533,7 +627,7 @@
           </div>
         </div>
       
-        <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
+        <div class="collapse collapse-arrow bg-base-200 rounded-box shadow-sm">
           <input type="checkbox" />
           <div class="collapse-title font-bold">Does this replace an analyst?</div>
           <div class="collapse-content opacity-80 text-sm">
@@ -552,9 +646,9 @@
 
 <p>📩 Tell us about your case and we’ll explain how to build clear, useful analytics designed for decision-making.</p>
 
-<p><strong>More clarity.</strong>
-<strong>Better decisions.</strong>
-<strong>Less noise.</strong></p>
+<p>More clarity.
+Better decisions.
+Less noise.</p>
 
     <a class="btn btn-neutral btn-lg" href="mailto:mail@persualia.com">Talk to a specialist</a>
   </div>
@@ -825,5 +919,11 @@
     
     <!-- Language Selector JavaScript -->
     <script src="/assets/js/language-selector.js"></script>
+
+    <!-- GSAP + ScrollTrigger + Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/en/assets/js/scroll-reveals.js" defer></script>
+    <script src="/en/assets/js/product-sequence.js" defer></script>
   </body>
 </html>

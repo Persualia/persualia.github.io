@@ -124,10 +124,16 @@
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
     <!--link rel="stylesheet" href="/assets/css/typography.css"-->
     <link rel="stylesheet" href="/assets/css/fa.css">
     <link rel="stylesheet" href="/assets/css/material-icons.css">
     
+    <!-- GPU detection — adds .no-gpu to <html> before first paint -->
+    <script>
+      (function(){try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');if(!g){document.documentElement.classList.add('no-gpu');return}var d=g.getExtension('WEBGL_debug_renderer_info'),r=d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):'';if(/swiftshader|llvmpipe|mesa|microsoft basic/i.test(r))document.documentElement.classList.add('no-gpu')}catch(e){document.documentElement.classList.add('no-gpu')}})();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/svg/persualia-logo.svg">
 
@@ -147,8 +153,48 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+      
+      
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
         <li><a href="/en/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li>
+          <details>
+            <summary data-i18n-key="navigation.products" data-i18n-scope="header">
+              <span class="font-medium">Productos</span>
+            </summary>
+            <ul>
+              
+                
+              
+                
+                  <li>
+                    <a href="/en/products/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">ROI Test</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/en/products/posts-promotion-system/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Post Promotion System</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/en/products/clear-web-analytics/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Web Analytics</span>
+                    </a>
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </details>
+        </li>
         <li><a href="/en/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
     </div>
@@ -160,6 +206,54 @@
         Persualia
       </span>
     </a>
+
+    <div class="hidden md:block">
+      
+
+
+<div class="dropdown">
+  <div tabindex="0" role="button" class="btn btn-ghost gap-2" aria-label="Products selector">
+    <span class="text-sm font-medium" data-i18n-key="navigation.products" data-i18n-scope="header">
+      Products
+    </span>
+    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
+    
+      
+    
+      
+        <li>
+          <a href="/en/products/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">ROI Test</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/en/products/posts-promotion-system/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Post Promotion System</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/en/products/clear-web-analytics/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Web Analytics</span>
+          </a>
+        </li>
+      
+    
+      
+    
+  </ul>
+</div>
+
+    </div>
   </div>
   
   <!--div class="navbar-center hidden lg:flex">
@@ -254,7 +348,7 @@
 
 <section class="hero hero--compact">
   <div class="container">
-      <h1 class="">Post promotion system</h1>
+      <h1 class="">Post Promotion System</h1>
     <div class="grid gap-10 lg:grid-cols-2 items-center">
       <div>
         <h2 class="text-primary">More visibility<br />for your content,<br />without extra effort</h2>
@@ -263,14 +357,14 @@
 <p>It’s not a content problem.
 <strong>It’s the algorithm.</strong></p>
 
-<p>Today, only between <strong>2% and 10%</strong> of your followers see what you publish organically. The rest simply never see it.</p>
+<p>Today, only between <strong>2% and 10% of your followers see what you publish organically.</strong> The rest simply never see it.</p>
 
         <div class="cta-row justify-start">
           <a class="btn btn-primary btn-lg" href="mailto:mail@persualia.com">Talk to a specialist</a>
         </div>
       </div>
       <figure class="card card-persualia-frost overflow-hidden">
-        <img src="/assets/images/products/sistema-promocion-posts.webp" alt="Post promotion system" class="w-full h-auto" />
+        <img src="/assets/images/products/sistema-promocion-posts.webp" alt="Post Promotion System" class="w-full h-auto" />
       </figure>
     </div>
   </div>
@@ -477,7 +571,7 @@
             
           </ul>
           <div class="font-bold text-secondary">Especially useful for retail, e-commerce, the third sector, and B2B projects.</div>
-          <div class="font-bold text-secondary">It’s a system designed for brands that want to build visibility in a sustained and cost-effective way, not just run one-off campaigns. If you’re already investing time in creating content, this system multiplies its impact. Each post stops being an isolated effort and becomes part of an ongoing strategy.</div>
+          <div class="">It’s a system designed for brands that want to build visibility in a sustained and cost-effective way, not just run one-off campaigns. If you’re already investing time in creating content, this system multiplies its impact. Each post stops being an isolated effort and becomes part of an ongoing strategy.</div>
         </div>
       </div>
     </div>
@@ -488,7 +582,7 @@
   <div class="container">
     <header class="section__header">
       <h2 class="section-title">Available platforms</h2>
-      <p class="mx-auto text-center opacity-80">The strategy adapts to each platform and your audience.</p>
+      <p class="section-subtitle mx-auto text-center opacity-80">The strategy adapts to each platform and your audience.</p>
     </header>
     <div class="flow">
       <div class="flex flex-wrap items-center justify-center gap-8">
@@ -527,7 +621,7 @@
       <h2 class="section-title">How does it work?</h2>
       <p class="section-subtitle mx-auto text-center">Simple, automatic, and controlled</p>
     </header>
-    <ul class="steps steps-vertical">
+    <ul class="steps steps-vertical mb-10">
       
         <li class="step step-primary" data-content="1">
           <div class="ml-4 text-left">
@@ -556,7 +650,7 @@
         <li class="step step-primary" data-content="4">
           <div class="ml-4 text-left">
             <h3 class="card-title">Automatic activation</h3>
-            <p class="opacity-80">The system detects the post and turns it into a campaign.</p>
+            <p class="opacity-80">The system detects the post and turns it into a campaign.<br /><br /></p>
             
           </div>
         </li>
@@ -595,7 +689,7 @@
       
         <div class="collapse collapse-arrow bg-base-100 rounded-box shadow-sm">
           <input type="checkbox" />
-          <div class="collapse-title font-bold">What is a post promotion system?</div>
+          <div class="collapse-title font-bold">What is a Post Promotion System?</div>
           <div class="collapse-content opacity-80 text-sm">
             It's a system that turns your organic posts into paid campaigns when they meet predefined rules.
           </div>
@@ -621,7 +715,7 @@
           <input type="checkbox" />
           <div class="collapse-title font-bold">Which social networks does it work on?</div>
           <div class="collapse-content opacity-80 text-sm">
-            It's currently available for Facebook, Instagram, and LinkedIn.
+            It's currently available for Facebook, Instagram, LinkedIn and TikTok.
           </div>
         </div>
       
@@ -664,11 +758,11 @@
 <section class="section bg-primary text-primary-content">
   <div class="container text-center">
     <h2>Make your content stop being invisible</h2>
-    <p><strong>If you’re already creating content, make it work for you.</strong></p>
+    <p>If you’re already creating content, make it work for you.</p>
 
 <p>📩 Tell us your case and we’ll explain how to activate the Post Promotion System for your brand.</p>
 
-<p><strong>More visibility. More impact. No extra effort.</strong></p>
+<p>More visibility. More impact. No extra effort.</p>
 
     <a class="btn btn-neutral btn-lg" href="mailto:mail@persualia.com">Talk to a specialist</a>
   </div>
@@ -939,5 +1033,11 @@
     
     <!-- Language Selector JavaScript -->
     <script src="/assets/js/language-selector.js"></script>
+
+    <!-- GSAP + ScrollTrigger + Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/en/assets/js/scroll-reveals.js" defer></script>
+    <script src="/en/assets/js/product-sequence.js" defer></script>
   </body>
 </html>

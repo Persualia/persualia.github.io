@@ -7,9 +7,9 @@
     
     
     <!-- Título dinámico para home con i18n -->
-    <title>Persualia - Màrqueting Conversacional | Persualia</title>
-    <meta property="og:title" content="Persualia - Màrqueting Conversacional" />
-    <meta property="twitter:title" content="Persualia - Màrqueting Conversacional" />
+    <title>Enginyeria de Conversió | Persualia</title>
+    <meta property="og:title" content="Enginyeria de Conversió" />
+    <meta property="twitter:title" content="Enginyeria de Conversió" />
     <meta name="description" content="Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir." />
     <meta property="og:description" content="Agencia de marketing conversacional. Copy que conecta y resultados que se pueden medir." />
     <meta property="og:url" content="https://persualia.com/" />
@@ -57,10 +57,16 @@
     
     
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
     <!--link rel="stylesheet" href="/assets/css/typography.css"-->
     <link rel="stylesheet" href="/assets/css/fa.css">
     <link rel="stylesheet" href="/assets/css/material-icons.css">
     
+    <!-- GPU detection — adds .no-gpu to <html> before first paint -->
+    <script>
+      (function(){try{var c=document.createElement('canvas'),g=c.getContext('webgl')||c.getContext('experimental-webgl');if(!g){document.documentElement.classList.add('no-gpu');return}var d=g.getExtension('WEBGL_debug_renderer_info'),r=d?g.getParameter(d.UNMASKED_RENDERER_WEBGL):'';if(/swiftshader|llvmpipe|mesa|microsoft basic/i.test(r))document.documentElement.classList.add('no-gpu')}catch(e){document.documentElement.classList.add('no-gpu')}})();
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/images/svg/persualia-logo.svg">
 
@@ -80,8 +86,48 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
         </svg>
       </div>
-      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg border border-base-300">
+      
+      
+      <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
         <li><a href="/ca/" data-i18n-key="navigation.home" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Inicio</span></a></li>
+        <li>
+          <details>
+            <summary data-i18n-key="navigation.products" data-i18n-scope="header">
+              <span class="font-medium">Productos</span>
+            </summary>
+            <ul>
+              
+                
+              
+                
+                  <li>
+                    <a href="/ca/productes/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">ROI Test</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/ca/productes/sistema-promocio-posts/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Sistemes de promoció de posts orgànics</span>
+                    </a>
+                  </li>
+                
+              
+                
+                  <li>
+                    <a href="/ca/productes/analitica-web-clara/" class="text-base-content hover:bg-base-300 transition-colors">
+                      <span class="font-medium">Analítica web</span>
+                    </a>
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </details>
+        </li>
         <li><a href="/ca/blog/" data-i18n-key="navigation.blog" data-i18n-scope="header" class="text-base-content hover:bg-base-300 transition-colors"><span class="font-medium">Blog</span></a></li>
       </ul>
     </div>
@@ -93,6 +139,54 @@
         Persualia
       </span>
     </a>
+
+    <div class="hidden md:block">
+      
+
+
+<div class="dropdown">
+  <div tabindex="0" role="button" class="btn btn-ghost gap-2" aria-label="Selector de productes">
+    <span class="text-sm font-medium" data-i18n-key="navigation.products" data-i18n-scope="header">
+      Productes
+    </span>
+    <svg class="w-4 h-4 fill-current opacity-60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
+      <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
+    </svg>
+  </div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-64 p-2 shadow-lg border border-base-300">
+    
+      
+    
+      
+        <li>
+          <a href="/ca/productes/roi-test/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">ROI Test</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/ca/productes/sistema-promocio-posts/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Sistemes de promoció de posts orgànics</span>
+          </a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/ca/productes/analitica-web-clara/" class="text-base-content hover:bg-base-300 transition-colors">
+            <span class="font-medium">Analítica web</span>
+          </a>
+        </li>
+      
+    
+      
+    
+  </ul>
+</div>
+
+    </div>
   </div>
   
   <!--div class="navbar-center hidden lg:flex">
@@ -185,61 +279,59 @@
 </script>
 
 <!-- Hero Section - DaisyUI 5 Pure with Gradient Background -->
-<div class="hero">   
-  <!-- Contenido Hero -->
-  <div class="text-center md:text-left ">
-    
-    <!-- Overline -->
-    <div class="badge badge-primary badge-lg">
-      Màrqueting Conversacional
-    </div>
-    
-    <!-- Título Principal -->
-    <h1 class="">
-      Persualia
-
-    </h1>
-    
-    <!-- Subtítulo -->
-    <h2 class="text-primary">
-      Com entenem això del màrqueting
-    </h2>
-    
-    <!-- Descripción -->
-    <div class="prose text-left [&>p]:my-5">
-      <h4 id="som-una-agència-de-màrqueting-amb-dues-obsessions-el-copy-que-connecta-i-els-resultats-que-es-poden-mesurar">Som una agència de màrqueting amb dues obsessions: el copy que connecta i els resultats que es poden mesurar.</h4>
-
-<p>Busquem paraules amb intenció, tecnologia que resol i estratègies enfocades a resultats.</p>
-
-<p>Creiem que persuadir va més enllà de comunicar. És connectar amb qui t’escolta, explicar una història amb sentit i saber interpretar el comportament de la teva audiència. Per això combinem storytelling creatiu amb tecnologia intel·ligent.</p>
-
-<p>Fem que el teu missatge arribi, impacti i converteixi. Amb cap, cor i recursos tècnics.</p>
-
-    </div>
-    
-    <!-- CTAs -->
-    <div class="cta-row md:justify-start gap-4 my-8">
-      <a href="mailto:mail@persualia.com" class="btn btn-primary btn-lg ">
-        Parlem
-      </a>
-      <a href="#products" class="btn btn-outline btn-lg ">
-        Productes
-      </a>
-    </div>
-    
-    <!-- Trust badges -->
-    <div class="cta-row flex-row flex-wrap  text-sm md:justify-start opacity-70">
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded">insights</span>
-        Resultats medibles
+<div class="hero animate-hero">
+  <div class="hero-content container">
+    <!-- Contenido Hero -->
+    <div class="text-center md:text-left ">
+      
+      <!-- Overline -->
+      <div class="badge badge-primary badge-lg">
+        Enginyeria de Conversió
       </div>
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded">edit</span>
-        Copy que conecta
+      
+      <!-- Título Principal -->
+      <h1 class="">
+        Les vendes no s’improvisen
+
+      </h1>
+      
+      <!-- Subtítulo -->
+      <h2 class="text-primary">
+        Infraestructura digital que converteix inversió en&nbsp;dades i dades en vendes
+      </h2>
+      
+      <!-- Descripción 
+      <div class="prose text-left [&>p]:my-5">
+        <h4 id="construïm-la-infraestructura-digital-que-converteix-inversió-en-dades-i-dades-en-vendes">Construïm la infraestructura digital que converteix inversió en dades i dades en vendes.</h4>
+
+<p>Tecnologia, dades i execució perquè cada decisió tingui un impacte mesurable.</p>
+
+      </div>-->
+      
+      <!-- CTAs -->
+      <div class="cta-row md:justify-start gap-4 my-8">
+        <a href="mailto:mail@persualia.com" class="btn btn-primary btn-lg ">
+          Contactar
+        </a>
+        <a href="#products" class="btn btn-outline btn-lg ">
+          Productes
+        </a>
       </div>
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-rounded">psychology</span>
-        IA amb criteri humà
+      
+      <!-- Trust badges -->
+      <div class="cta-row justify-start flex flex-col flex-wrap text-base md:justify-start opacity-70">
+        <div class="flex  items-start gap-2">
+          <i class="fa-solid fa-award mt-1"></i>
+          +15 anys afinant sistemes de conversió
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-building-user mt-1"></i>
+          +75 marques que han escalat amb dades fiables
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-diagram-project mt-1"></i>
+          +300 projectes executats amb impacte mesurable
+        </div>
       </div>
     </div>
   </div>
@@ -250,195 +342,207 @@
 <section class="section">
   <div class="container">
     <!-- Section Header -->
-    <h2 class="section__header">
-      Així pensem, així actuem
-    </h2>
+    <h1 class="section__header" data-reveal>
+      El Sistema de Conversió Persualia
+    </h1>
     
     
     
     <!-- Feature Rows -->
-    <div class="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
+    <div class="grid grid-cols-1 gap-8 sm:gap-10 md:gap-18">
       
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[auto_1fr] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[auto_1fr] row-even
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/StrategyIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/StrategyIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  pr-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Estratègia amb sentit</strong></p>
+  <div class="card-body px-0  pr-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-accent  transition-colors duration-300">
+      <p><strong>Estratègia basada en evidències</strong></p>
 
-<p>Cada projecte arrenca amb preguntes. Escoltem, analitzem i tracem un pla que tingui peus, cap i resultats.</p>
+<p>Desplegament de plans de màrqueting on cada decisió es fonamenta en l’anàlisi de dades i l’històric de rendiment. Sense suposicions, només validació d’hipòtesis.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[1fr_auto] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[1fr_auto] row-odd
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/AdsIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  bg-primary sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/AdsIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  lg:order-1 pl-0  pt-0">
-    <div class="prose lg:prose-lg">
+  <div class="card-body px-0  lg:order-1 pl-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-primary  transition-colors duration-300">
       <p><strong>Publicitat que sap a qui parla</strong></p>
 
-<p>Ja sigui a xarxes o a Google, no llancem anuncis a l’aire. Segmentem, impactem i optimitzem. Som especialistes a trobar l’audiència adequada i fer que cada euro invertit rendeixi de debò.</p>
+<p>Segmentació, impacte i optimització a Google, Meta i LinkedIn que no només compren trànsit: inicien diàlegs, qualifiquen i prioritzen els perfils amb més probabilitat de conversió.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[auto_1fr] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[auto_1fr] row-even
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/ChatbotIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/ChatbotIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  pr-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Creem chatbots que no semblen robots</strong></p>
+  <div class="card-body px-0  pr-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-accent  transition-colors duration-300">
+      <p><strong>Chatbots orientats a la conversió</strong></p>
 
-<p>Converses naturals, to humà i objectius clars. Els nostres chatbots no només responen: qualifiquen, recopilen i converteixen.</p>
+<p>Fluxos a Typebot, Landbot i WhatsApp Business API que capten atenció, guien el relat i extreuen dades estructurades. Qualifiquen leads i monitoren esdeveniments d’alta granularitat, detectant comportaments i friccions invisibles per a la publicitat convencional.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[1fr_auto] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[1fr_auto] row-odd
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/IAIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  bg-primary sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/IAIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  lg:order-1 pl-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Intel·ligència artificial amb criteri humà</strong></p>
+  <div class="card-body px-0  lg:order-1 pl-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-primary  transition-colors duration-300">
+      <p><strong>Intel·ligència artificial aplicada, no decorativa</strong></p>
 
-<p>Fem servir IA per entendre el comportament de l’audiència, detectar patrons, millorar resultats i crear solucions personalitzades.</p>
+<p>No es tracta de dependre només de la IA nativa de Meta o Google. També l’apliquem per a anàlisi predictiva, optimització de processos i generació dinàmica d’actius creatius que milloren el rendiment real i l’experiència d’usuari.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[auto_1fr] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[auto_1fr] row-even
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/AutomationIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/AutomationIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  pr-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Automatitzacions que alliberen temps</strong></p>
+  <div class="card-body px-0  pr-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-accent  transition-colors duration-300">
+      <p><strong>Automatitzacions que eliminen fricció operativa</strong></p>
 
-<p>Automatitzem tasques repetitives perquè tu i el teu equip us pugueu centrar en el que realment importa. Tot flueix, però està sota control.</p>
+<p>Automatització de tasques repetitives perquè tu i el teu equip us pugueu centrar en la feina més estratègica i de més valor.</p>
 
     </div>
   </div>
 </div>
+
       
       
 
 <!-- Feature Row using DaisyUI 5 Card Side Component - Clean Version -->
 <div class="
-  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 
-   
-    sm:grid-cols-[1fr_auto] 
-   
+  group
+  grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8
+  
+    sm:grid-cols-[1fr_auto] row-odd
+  
   ">
   <!-- Figure (Image) - Par=Izquierda, Impar=Derecha -->
   
-  <figure class=" sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40">
-    <img
-      src="/assets/images/home/TeamIcon2.webp"
-      alt="Característica"
-      class="rounded-xl object-cover w-full h-auto" />
+  <figure class="rounded-xl overflow-hidden bg-accent  bg-primary sm:order-2  flex justify-center items-center mx-auto sm:mx-0 w-40 h-40 shrink-0">
+      <img
+        src="/assets/images/home/TeamIcon2.webp"
+        alt="Característica"
+        class="object-cover w-full h-full group-hover:animate-pulse-soft" />
   </figure>
   
 
   <!-- Card Body (Text Content) -->
-  <div class="card-body px-0  lg:order-1 pl-0  pt-0">
-    <div class="prose lg:prose-lg">
-      <p><strong>Un equip amb mil mirades</strong></p>
+  <div class="card-body px-0  lg:order-1 pl-0  pt-4 sm:pt-0">
+    <div class="prose lg:prose-lg  group-hover:[&>p>strong]:text-primary  transition-colors duration-300">
+      <p><strong>Projectes executats per especialistes, no generalistes</strong></p>
 
-<p>Copywriters, periodistes, guionistes, programadors, tècnics, creatius, analistes i estrategs. Aquesta barreja ens permet veure el teu projecte des de tots els angles i trobar la millor manera de fer-lo avançar.</p>
+<p>Copywriters per al response marketing, programadors d’arquitectures digitals, analistes de dades, creatius d’impacte i estrategs d’embuts. El Sistema d’Evidència Persualia l’operen especialistes que dominen cada vèrtex de la conversió: del codi a la paraula.</p>
 
     </div>
   </div>
 </div>
+
       
     </div>
   </div>
@@ -448,152 +552,217 @@
 <section id="products" class="section bg-base-200">
   <div class="container">
     <!-- Section Header -->
-      <h2 class="section__header">
-        Els productes estrella de Persualia
-      </h2>
-      <h3 class="text-primary">
-        El millor que sabem fer (i el que millor sol funcionar)
-      </h3>            
+      <h1 class="section__header">
+        Els productes estrella
+      </h1>
+      <!--
+      <h3 class="text-primary mb-10">
+        Intel·ligència aplicada al creixement digital
+      </h3>-->            
       
+      <!--
       <div class="prose prose-lg !my-5">
         <p>Aquestes són algunes de les solucions que més apliquem. Pensades per <strong>captar millor, automatitzar més i decidir amb dades.</strong></p>
 
 <p>Neixen de problemes reals dels nostres clients i estan pensades perquè el màrqueting no només soni bé, sinó que funcioni.</p>
 
-      </div>
+      </div>-->
     
       <!-- Products Grid -->  
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-xs sm:max-w-6xl md:max-w-2xl lg:max-w-6xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mx-auto max-w-xs sm:max-w-6xl md:max-w-2xl lg:max-w-6xl">
         
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/AdsIcon2.webp" 
-         alt="Paid Social & Ads" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="leadflow"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/AdsIcon2.webp"
+         alt="LeadFlow System"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Paid Social & Ads</h3>
+    <h3 class="card-title title-card mb-3">LeadFlow System</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Arriba més lluny amb campanyes digitals que funcionen.</strong></p>
+      <p><strong>Sistema de captació publicitària orientat a generar contactes qualificats.</strong></p>
 
-<p>Gestionem anuncis a Facebook, Instagram, TikTok, LinkedIn i Google per a branding, vendes o leads. També configurem catàlegs a Google i Meta per vendre sense friccions.</p>
+<p>Invertir en publicitat i rebre contactes sense interès real és frustrant. L’equip comercial perd temps, es desgasta i les dades no aclareixen quin canal funciona realment.</p>
+
+<p>LeadFlow System crea embuts de captació que filtren, segmenten i qualifiquen usuaris abans del contacte comercial. Així, el teu equip parla amb perfils més preparats i la teva publicitat genera contactes amb més intenció.</p>
 
     </div>
     
-    
+    <div class="card-actions justify-end mt-auto">
+      
+      <a href="mailto:mail@persualia.com" class="btn btn-primary btn-sm">
+        Consultar el meu cas
+      </a>
+      
+    </div>
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-roitest2.webp" 
-         alt="ROI Test" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="roi-test"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/roi-test.webp"
+         alt="ROI Test"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
-  
   
   <div class="card-body flex-grow">
     <h3 class="card-title title-card mb-3">ROI Test</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Provem, afinem i maximitzem la teva inversió.</strong></p>
+      <p><strong>Segona opinió tècnica per a campanyes amb marge de millora.</strong></p>
 
-<p>Analitzem les teves campanyes de venda anteriors i llancem una bateria de campanyes. En 3 mesos testem el resultat, en 12 consolidem el que funciona.</p>
+<p>Quan els resultats no arriben al potencial previst, no sempre és clar si el problema és a l’estructura, la segmentació, les creativitats o el mesurament.</p>
+
+<p>El ROI Test aporta una validació externa sense compromisos inicials: durant 90 dies auditem i executem un pla de contrast per consolidar només estratègies rendibles en producció.</p>
 
     </div>
     
-    
+    <div class="card-actions justify-end mt-auto">
+      
+      <a href="/ca/productes/roi-test/" class="btn btn-primary btn-sm">
+        Saber-ne més
+      </a>
+      
+    </div>
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-promopost2.webp" 
-         alt="Sistema de promoció de posts" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="promopost"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/product-promopost2.webp"
+         alt="Sistemes de promoció de posts orgànics"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Sistema de promoció de posts</h3>
+    <h3 class="card-title title-card mb-3">Sistemes de promoció de posts orgànics</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Més visibilitat per al teu contingut, sense esforç extra.</strong></p>
+      <p><strong>Més visibilitat, sense càrrega operativa extra.</strong></p>
 
-<p>Sabies que només entre un 2% i un 10% dels teus seguidors veuen el que publiques? Les teves publicacions orgàniques es convertiran en campanyes de pagament automàtiques, sense que hagis de moure un dit.</p>
+<p>Amb un abast orgànic del 2% al 10%, fins i tot el contingut de més valor queda fora del radar de la teva audiència. Publicar més no resol el problema i la gestió manual consumeix recursos.</p>
+
+<p>Aquest sistema converteix publicacions estratègiques en campanyes segmentades que garanteixen visibilitat i interacció constants sense càrrega operativa diària.</p>
 
     </div>
     
-    
     <div class="card-actions justify-end mt-auto">
+      
       <a href="/ca/productes/sistema-promocio-posts/" class="btn btn-primary btn-sm">
-        Vull saber més
+        Saber-ne més
       </a>
+      
     </div>
-    
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-analytics2.webp" 
-         alt="Analítica web clara (de debò)" 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="analytics"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/product-analytics2.webp"
+         alt="Analítica web"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">Analítica web clara (de debò)</h3>
+    <h3 class="card-title title-card mb-3">Analítica web</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Ni palla, ni caos. Només les dades que importen.</strong></p>
+      <p><strong>Claredat en la presa de decisions sense dashboards complexos.</strong></p>
 
-<p>Llegir dades a GA4 et resulta confús? Creem informes visuals i personalitzats perquè entenguis què passa al teu web sense perdre temps ni necessitar un analista.</p>
+<p>La complexitat de GA4 i la manca de context condueixen a decisions basades en intuïcions o mètriques poc accionables. Quan les dades no s’interpreten correctament, perden valor estratègic.</p>
+
+<p>Configurem informes visuals personalitzats que identifiquen fuites de conversió i mostren el rendiment real per facilitar decisions clares i fiables.</p>
 
     </div>
-    
     
     <div class="card-actions justify-end mt-auto">
+      
       <a href="/ca/productes/analitica-web-clara/" class="btn btn-primary btn-sm">
-        Vull saber més
+        Saber-ne més
       </a>
+      
     </div>
-    
   </div>
 </div>
 
         
         <!-- Componente para tarjetas de productos -->
 <div class="card bg-base-100 shadow-sm w-full">
-  
-  <figure class="w-full">
-    <img src="/assets/images/home/product-custom2.webp" 
-         alt="No encaixes en cap? Millor." 
-         class="w-full h-52 object-cover rounded-t-xl" />
+  <figure class="w-full" style="padding-top: 1.5rem;">
+    
+    <canvas
+      class="w-full h-auto block rounded-xl"
+      data-sequence="custom"
+      data-frame-count="50">
+    </canvas>
+    
+    
+    <img src="/assets/images/home/product-custom2.webp"
+         alt="Arquitectura de conversió a mida"
+         class="w-full h-72 object-contain rounded-t-xl product-fallback-img" />
+    
   </figure>
   
-  
   <div class="card-body flex-grow">
-    <h3 class="card-title title-card mb-3">No encaixes en cap? Millor.</h3>
+    <h3 class="card-title title-card mb-3">Arquitectura de conversió a mida</h3>
     <div class="text-base-content/80 mb-4 prose prose-sm">
-      <p><strong>Se’ns dona bé escoltar, adaptar-nos i trobar el que realment necessites.</strong></p>
+      <p><strong>La infraestructura que connecta els teus anuncis amb el teu sistema real de vendes.</strong></p>
 
-<p>Si tens un repte de màrqueting digital, parlem. Si no tens clar què necessites, també. Adaptem cada solució a cada cas.</p>
+<p>La teva organització disposa d’eines, processos i objectius definits. Les solucions estàndard no s’adapten a aquesta realitat i generen fricció, duplicitats i pèrdua de dades.</p>
+
+<p>Dissenyem amb el teu equip una infraestructura alineada amb la vostra manera de treballar que integra campanyes, CRM i sistemes de venda per eliminar ineficiències i escalar amb control.</p>
 
     </div>
     
-    
+    <div class="card-actions justify-end mt-auto">
+      
+      <a href="mailto:mail@persualia.com" class="btn btn-primary btn-sm">
+        Consultar el meu cas
+      </a>
+      
+    </div>
   </div>
 </div>
 
@@ -606,9 +775,13 @@
 <section class="py-16 lg:py-24">
   <div class="mx-auto px-4">
     <!-- Section Header -->    
-    <h2 class="text-center">
-      Han confiat en Persualia
+    <h2 class="text-center" data-reveal>
+      Trajectòria avalada
     </h2>
+    <!--
+    <h3 class="text-center text-primary">
+      Projectes d'alt rendiment desenvolupats per a:
+    </h3>--> 
     
     
     <!-- Carousel Component -->
@@ -620,203 +793,203 @@
       <img src="/assets/images/clients/accion-contra-el-hambre.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/acnur.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/aldeas-infantiles.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Amnistia-Internacional.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Andreu.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Blue-Planet.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Calbet.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Caritas.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Clinic.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Dalmau.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/finques-feliu.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/fundacio_carreras.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/fpm.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/gff.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/greenpeace.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/goes-group.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/gotta.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/iebs.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/irb.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/Lindt.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/manubens.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/medicos-sin-fronteras.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/MNAC.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/monapart.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/omnium.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/oxfam.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/palau.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/SJD.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
     <div class="flex-shrink-0">
       <img src="/assets/images/clients/vall-dhebron.webp"
            alt="Cliente"
            decoding="async" loading="eager"
-           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" />
+           class="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-[filter] duration-300" />
     </div>
     
   </div>
@@ -846,8 +1019,8 @@
 
     /* Clave: animamos solo lo que mide un set (definido en --logos-translate) */
     @keyframes carrusel-scroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(var(--logos-translate)); }
+      from { transform: translate3d(0, 0, 0); }
+      to   { transform: translate3d(var(--logos-translate), 0, 0); }
     }
   </style>
 
@@ -903,7 +1076,6 @@
             updateTranslateDistance();
           });
           ro.observe(scroller);
-          ro.observe(track);
         } else {
           const refreshFallback = () => {
             ensureWidth();
@@ -923,11 +1095,11 @@
 </section>
 
 <!-- CTA Section - DaisyUI 5 Pure -->
-<section class="bg-primary text-primary-content py-8">
+<section class="bg-primary text-primary-content py-8" data-reveal>
   <div class="mx-auto text-center max-w-2xl px-4">
     <h2>En parlem?</h2>
     <p>
-      Si tens un repte de màrqueting digital, estem aquí per ajudar-te a resoldre'l.
+      Si tens un repte de màrqueting digital, som aquí per ajudar-te a resoldre'l.
     </p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="mailto:mail@persualia.com" class="btn btn-neutral btn-lg">Contactar</a>
@@ -1200,5 +1372,11 @@
     
     <!-- Language Selector JavaScript -->
     <script src="/assets/js/language-selector.js"></script>
+
+    <!-- GSAP + ScrollTrigger + Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script src="/ca/assets/js/scroll-reveals.js" defer></script>
+    <script src="/ca/assets/js/product-sequence.js" defer></script>
   </body>
 </html>
